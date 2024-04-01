@@ -1,5 +1,9 @@
-:root {
-  --clr-white: #fff;
+/* ==== Media ==== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+ --clr-white: #fff;
  --clr-white-one: #f2f2f2f2;
  --clr-saturation: hsl(217, 0%, 61%);
  --clr-black: #111;
@@ -29,7 +33,7 @@
  --clr-gradient:  var(--color-secondary) 10%,var(--color-yellow) 25%,var(--color-green) 50%,var(--color-blue) 75%,var(--color-primary) 90%;
 
  /* === Fonts* Weight === */
- --font-family:"Roboto", sans-serif;
+ --font-family: "Montserrat", sans-serif;
  --font-normal: normal;
  --font-italic: italic;
  --font-bold: bold;

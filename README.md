@@ -19,3 +19,14 @@ Creating a Single Page Application Website with Javascript Vanilla, Vite Js, Exp
 
 [Eslint](https://eslint.org/docs/latest/use/getting-started)
 
+> Adobe Express and Firefly (Edit Img and Create Img IA)
+
+[adobe_express](https://www.adobe.com/es/express/)
+
+[adobe_firefly](https://firefly.adobe.com/)
+
+> Algorithms 
+
+[algorithms_js](https://www.30secondsofcode.org/js/algorithm/p/1/)
+
+[pattern_design](https://refactoring.guru/es/design-patterns/catalog)
