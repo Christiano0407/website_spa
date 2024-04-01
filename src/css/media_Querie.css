@@ -1,0 +1,47 @@
+/* === Mobile === */
+@media (width <= 375px) {}
+
+@media (width <= 460px) {
+  .icon__figure {
+    width: 8rem;
+    height: 8rem;
+  }
+  .wrapper__content--text {
+   font-size: var(--title);
+   font-weight: var(--font-700);
+  }
+}
+
+@media (width <= 640px) {
+  .wrapper {
+    width: 100svw;
+    height: 100svh;
+    background: var(--clr-background-back);
+    position: relative;
+  }
+  .wrapper__content {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+   }
+  .icon__figure {
+    width: 12rem;
+    height: 12rem;
+  }
+  .wrapper__content--text {
+   font-size: var(--title-principal);
+   font-weight: var(--font-900);
+  }
+}
+
+/* === Tablet === */
+@media (width >= 768px) {}
+
+@media (width > 1024px) {}
+
+/* === Screen === */
+@media (width > 1280px) {}
+
+@media (width > 1536px) {}

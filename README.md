@@ -25,8 +25,11 @@ Creating a Single Page Application Website with Javascript Vanilla, Vite Js, Exp
 
 [adobe_firefly](https://firefly.adobe.com/)
 
-> Algorithms 
+> Algorithms & Pattern Designs
 
 [algorithms_js](https://www.30secondsofcode.org/js/algorithm/p/1/)
 
 [pattern_design](https://refactoring.guru/es/design-patterns/catalog)
+
+> Google Fonts
+[Google_fonts](https://fonts.google.com/)
