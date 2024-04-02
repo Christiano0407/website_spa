@@ -58,6 +58,10 @@
  /* === Display ==== */
  --flex: flex;
  --grid: grid;
+ --hidden:hidden;
+ --visible: visible; 
+ --none: none;
+
  --grid-minmax: repeat(auto-fix, minmax(15rem, 1fr));
  --grid-thee: repeat(3, 1fr);
  --grid-frame: 15rem 1fr 1fr;
@@ -137,7 +141,6 @@
  /* === Text-wrap (ajuste de texto) === */
  --text-wrap: balance;
  /* === aparición o desaparición de barras de desplazamiento ===*/
- --hidden: hidden;
  --scrollbar-gutter: stable both-edges; 
  --scrolling-x-touch: -webkit-overflow-scrolling: touch;
  /* === overscroll-behavior (desplazamiento excesivo) === */
@@ -167,6 +170,7 @@ html {
 body {
   width: 100dvw;
   min-height: 100dvh;
+  background: var(--clr-white-one);
   font-family: var(--font-family);
 }
 
@@ -220,6 +224,14 @@ button {
 }
 button:active {
   transform: scale(0.9);
+}
+
+.display {
+  display: var(--flex);
+}
+
+.none {
+  display: var(--none);
 }
 
 /* ==== Scheme Color ==== */
