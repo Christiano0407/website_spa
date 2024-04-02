@@ -1,0 +1,286 @@
+/** === Mobile === */
+/* Media queries */
+@media (max-width: 375px) {
+  .screen__landing {
+   display: none;
+  }
+  .app {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper__logo {
+    position: var(--absolute);
+    left: 22.5%;
+    top: 20%;
+  }
+  .logo__figure {
+    width: 20rem;
+    height: 15rem;
+  }
+  .mobile__landing {
+    width: 100%;
+    height: 100vh;
+    /*  background-image: url('../img/mobile/travel_9.jpg'); */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/mobile/travel_9.jpg') center/cover no-repeat;
+    object-fit: var(--cover);
+    background-position: var(--center);
+    background-repeat: var(--no-repeat);
+    background-size: var(--cover);
+    position: var(--relative);
+  }
+  .landing__wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  .landing__wrapper--text {
+    position: var(--absolute);
+    display: var(--flex);
+    flex-direction: var(--column);
+    left: 5%;
+    bottom: 20%;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+  .text__title {
+    font-size: 2rem;
+    font-weight: var(--font-900);
+    margin-bottom: 2rem;
+  }
+  strong {
+    font-size: var(--title);
+    font-weight: var(--font-regular); 
+    color: var(--clr-principal);
+  }
+  .text__destiny {
+    font-size: var(--text-small);
+    font-weight: var(--font-normal);
+  }
+  .wrapper__btn {
+    position: var(--absolute);
+    bottom: 3rem;
+    left: 5%;
+    background: var(--clr-principal);
+    color: var(--clr-white-one);
+    width: 90%;
+    padding: 1.5rem;
+    margin: var(--margin-auto);
+    border: var(--none);
+    outline: var(--none);
+    border-radius: 0.8rem;
+    text-align: center;
+    font-weight: var(--font-700);
+    font-size: var(--text-big);
+  }
+}
+/* Para dispositivos con un ancho máximo de 375px */
+@media (min-width: 376px) and (max-width: 460px) {
+  .screen__landing {
+    display: none;
+  }
+  .app {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper__logo {
+    position: var(--absolute);
+    left: 20%;
+    top: 20%;
+  }
+  .logo__figure {
+    width: 20rem;
+    height: 15rem;
+  }
+  .mobile__landing {
+    width: 100%;
+    height: 100vh;
+    /*  background-image: url('../img/mobile/travel_9.jpg'); */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/mobile/travel_9.jpg') center/cover no-repeat;
+    object-fit: var(--cover);
+    background-position: var(--center);
+    background-repeat: var(--no-repeat);
+    background-size: var(--cover);
+    position: var(--relative);
+  }
+  .landing__wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  .landing__wrapper--text {
+    position: var(--absolute);
+    display: var(--flex);
+    flex-direction: var(--column);
+    left: 5%;
+    bottom: 20%;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+  .text__title {
+    font-size: 2rem;
+    font-weight: var(--font-900);
+    margin-bottom: 2rem;
+  }
+  strong {
+    font-size: var(--title);
+    font-weight: var(--font-regular); 
+    color: var(--clr-principal);
+  }
+  .text__destiny {
+    font-size: var(--text-small);
+    font-weight: var(--font-normal);
+  }
+  .wrapper__btn {
+    position: var(--absolute);
+    bottom: 3rem;
+    left: 5%;
+    background: var(--clr-principal);
+    color: var(--clr-white-one);
+    width: 90%;
+    padding: 2rem;
+    margin: var(--margin-auto);
+    border: var(--none);
+    outline: var(--none);
+    border-radius: 0.8rem;
+    text-align: center;
+    font-weight: var(--font-700);
+    font-size: var(--text-big);
+  }
+}
+
+/* Para dispositivos con un ancho máximo de 460px */
+/* @media (max-width: 460px) {
+  .icon__figure {
+    width: 8rem;
+    height: 8rem;
+  }
+  .wrapper__content--text {
+    font-size: var(--title);
+    font-weight: var(--font-700);
+  }
+} */
+
+/* Para dispositivos con un ancho máximo de 640px */
+@media (min-width: 461px) and (max-width: 640px)  {
+  .screen__landing {
+    display: none;
+  }
+  .app {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper__logo {
+    position: var(--absolute);
+    left: 27.5%;
+    top: 5%;
+  }
+  .logo__figure {
+    width: 20rem;
+    height: 20rem;
+  }
+  .mobile__landing {
+    width: 100%;
+    height: 100vh;
+    /*  background-image: url('../img/mobile/travel_9.jpg'); */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/mobile/travel_9.jpg') center/cover no-repeat;
+    object-fit: var(--cover);
+    background-position: var(--center);
+    background-repeat: var(--no-repeat);
+    background-size: var(--cover);
+    position: var(--relative);
+  }
+  .landing__wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .landing__wrapper--text {
+    position: var(--absolute);
+    display: var(--flex);
+    flex-direction: var(--column);
+    left: 5%;
+    bottom: 25%;
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+  .text__title {
+    font-size: 2.4rem;
+    font-weight: var(--font-900);
+    margin-bottom: 2rem;
+  }
+  strong {
+    font-size: var(--title-media);
+    font-weight: var(--font-regular); 
+    color: var(--clr-principal);
+  }
+  .text__destiny {
+    font-size: 1.6rem;
+    font-weight: var(--font-normal);
+    filter: brightness(0.7);
+  }
+  .wrapper__btn {
+    position: var(--absolute);
+    bottom: 3rem;
+    left: 5%;
+    background: var(--clr-principal);
+    color: var(--clr-white-one);
+    width: 90%;
+    padding: 2.5rem;
+    margin: var(--margin-auto);
+    border: var(--none);
+    outline: var(--none);
+    border-radius: 2rem;
+    text-align: center;
+    font-weight: var(--font-700);
+    font-size: var(--text-big);
+  }
+}
+
+/* Otras media queries... */
+
+/** === Tablet === */
+@media (min-width: 768px) {
+  .screen__landing {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {}
+
+/** === Screen === */
+@media (min-width: 1280px) {}
+
+@media (min-width: 1536px) {}
+
+/** === Landscape === */
+@media screen and (min-width: 600px), screen and (orientation: landscape) {}
+
+
+/** ==== Scheme Color ==== */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+  }
+  a:hover {
+    color: var(--clr-white-one);
+  }
+  button {
+    background-color: var(--clr-principal);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--clr-white);
+    background-color: var(--clr-principal);
+  }
+  a:hover {
+    color: var(--clr-white-one);
+  }
+  button {
+    background-color: var(--clr-principal);
+  }
+}
