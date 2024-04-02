@@ -1,6 +1,6 @@
 /* ==== Media ==== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* @import url('./src/css/media_Querie.css'); */
+@import url("./src/css/media_Queries.css");
 
 :root{
  --clr-white: #fff;
@@ -57,6 +57,7 @@
 
  /* === Display ==== */
  --flex: flex;
+ --column: column;
  --grid: grid;
  --hidden:hidden;
  --visible: visible; 
@@ -71,6 +72,7 @@
  --gap: 2rem;
 
  /* === Padding & Margin === */
+ --margin-auto: 0 auto;
  --margin: 2rem, auto;
  --margin-1: 1rem, auto;
  --padding: 1rem;
@@ -96,7 +98,9 @@
  --height: 100%;
  --min-height: 100vh;
  --svh:100svh; 
+ --svw:100svw; 
  --dvh:100dvh;
+ --dvw:100dvw;
  --with-scroll: 250vw;
 
  /* === Columns === */
@@ -118,7 +122,10 @@
  /* === Images - Aspect Ratio - ===*/
  --ratio-hd: 16/9; 
  --ratio-square: 1;
- --object-fit: cover;
+ --cover: cover;
+ --no-repeat: no-repeat;
+ --center: center;
+
  /* === Images - Max Width - ===*/
  --max-width_one: 1.5rem; 
  --max-width_two: 2.5rem; 
@@ -232,32 +239,4 @@ button:active {
 
 .none {
   display: var(--none);
-}
-
-/* ==== Scheme Color ==== */
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--clr-black);
-    background-color: var(--clr-white);
-  }
-  a:hover {
-    color: var(--clr-white-one);
-  }
-  button {
-    background-color: var(--clr-principal);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: var(--clr-white);
-    background-color: var(--clr-principal);
-  }
-  a:hover {
-    color: var(--clr-white-one);
-  }
-  button {
-    background-color: var(--clr-principal);
-  }
 }
