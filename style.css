@@ -229,14 +229,14 @@ button {
   outline: none;
   border: none;
 }
-button:active {
+button:active, wrapper__btn:active {
   transform: scale(0.9);
 }
 
 .display {
-  display: var(--flex);
+  display:block;
 }
 
 .none {
-  display: var(--none);
+  display:none;
 }
