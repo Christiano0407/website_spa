@@ -240,3 +240,19 @@ button:active, wrapper__btn:active {
 .none {
   display:none;
 }
+
+/* ======== ==== == Animations == ==== ======== */
+@keyframes fadeIn {
+  from {
+   opacity: 0;
+   transform: translateY(-6rem);
+  }
+  to {
+   opacity: 1;
+   transform: translateY(0);
+  }
+}
+
+#idApp {
+  animation: fadeIn 1s ease-out 2s forwards;
+}
