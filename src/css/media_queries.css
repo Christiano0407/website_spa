@@ -327,7 +327,7 @@
   }
   .screen__img--figure {
     width: 100%;
-    height: 20rem;
+    height: 25rem;
     z-index: 2;
   }
   .screen__img--figure:nth-child(2) {
@@ -456,8 +456,227 @@
   }
 }
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    width: 100dvw;
+    height: 100dvh;
+    background: var(--clr-white-one);
+  }
+  .mobile__landing {
+    grid-column: 1 / 2;
+    width: 100%;
+  }
+  .landing__wrapper {
+    height: 100vh;
+    width: 100%;
+    display: var(--flex);
+    flex-direction: var(--column);
+  }
+  .wrapper__logo {
+    position: absolute;
+    background: var(--clr-secondary);
+    left: 15px;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }
+  .logo__figure {
+    width: 4.5rem;
+    height: 4.5rem;
 
-@media (min-width: 1024px) {}
+  }
+  .landing__wrapper--text {
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text__title {
+    color: #111;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 900;
+  }
+  strong {
+    color: var(--clr-principal);
+  } 
+  .text__destiny {
+    color: #111;
+    font-weight: 700;
+    font-size: 1.2rem;
+    filter: brightness(0.5);
+    text-align: center;
+  }
+  .wrapper__btn {
+    position: absolute;
+    background: var(--clr-principal);
+    color: var(--clr-white);
+    width: 10rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    top: 295px;
+    right: 10px;
+  }
+  .screen__text {
+    position: absolute;
+    width: 35rem;
+    padding: 1rem;
+    top: 280px;
+    left: 1.5rem;
+  }
+  .screen__text--paragraph {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+    padding: 0.5rem;
+  }
+  .screen__img {
+    width: 90%;
+    margin: 1rem auto;
+    margin-top: 12rem;
+  }
+  .screen__img--figure {
+    width: 100%;
+    height: 30rem;
+    z-index: 2;
+  }
+  .screen__img--figure:nth-child(2) {
+    position: absolute;
+    top: 10.5px;
+    width: 95%;
+    left: 8px;
+    z-index: 1;
+  }
+  .screen__img--figure:nth-child(3) {
+    position: absolute;
+    top: 22.5px;
+    width: 90%;
+    left: 15px;
+    z-index: 0;
+    box-shadow: 4px 4px 15px #111;
+  }
+  .screen__img--figure .figure__img {
+    border-radius: 0.8rem;
+  }
+
+  .screen__landing {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    position: relative;
+  }
+  .screen__landing--border {
+    width: inherit;
+    height: 95vh;
+   /*  padding: 2rem; */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/web/trip_web_6.jpg') center/cover no-repeat;
+    object-fit: var(--cover);
+    background-position: var(--center);
+    background-repeat: var(--no-repeat);
+    background-size: var(--cover);
+    position: var(--relative);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .trip__card {
+    position: absolute;
+    width: 22.5rem;
+    display: var(--flex);
+    align-items: center;
+    gap: 2rem;
+    background: #f2f2f2;
+    left: 2rem;
+    top: 5rem;
+    border-radius: 0.8rem;
+  }
+  .trip__card--text {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin-left: 0.5rem;
+  }
+  .card__text {
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .card__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .trip__card--images {
+    /* padding: 1rem; */
+    width: 100%;
+  }
+  .card__figure {
+   width: 10rem;
+   /*  height: 5rem; */
+   padding: 0.5rem;
+  }
+  .card__img {
+    border-radius: 0.5rem;
+  }
+  .trip__user {
+    position: absolute;
+    display: var(--flex);
+    align-items: center;
+    gap: 0.5rem;
+    right: 15px;
+    /* top: 5px; */
+    bottom: 15px;    
+  }
+  .trip__user--contact {
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 0.8rem;
+  }
+  .contact__text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111;
+  }
+  .trip__user--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+  }
+  .trip__information {
+    position: absolute;
+  }
+  .trip__information--text {
+   font-size: 1.4rem;
+   color: #f2f2f2;
+   font-weight: 700;
+  }
+  .trip__information--text::before {
+   content: "";
+   border: 2px solid #f2f2f2;
+   border: 0.8rem;
+  }
+}
+  
 
 /** === Screen === */
 @media (min-width: 1280px) {}
