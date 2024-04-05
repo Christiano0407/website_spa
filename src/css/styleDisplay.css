@@ -241,3 +241,11 @@ button:active, wrapper__btn:active {
 }
 
 /* ======== ==== == Display == ==== ======== */
+.navigation__mobile {
+  width: 100%;
+  position: relative;
+}
+.nav__bar {
+  width: 100%;
+  position: absolute;
+}
