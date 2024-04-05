@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./src/icons/Dream Trip.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   <link rel="stylesheet" href="../css/styleDisplay.css">
-  <link rel="stylesheet" href="../css/display_responsive.css">
+  <link rel="stylesheet" href="../css/responsive/display_responsive.css">
   <title>Dream Trip || Website Travel || Mobile & Display</title>
 </head>
 <body>
@@ -27,11 +27,11 @@
         <nav id="idNavBar" class="navBar">
           <div class="navBar__logo">
             <figure class="navBar__logo--figure">
-              <img class="navBar__logo--img">
+              <img class="navBar__logo--img" src="../icons/Dream Trip.png">
             </figure>
           </div>
           <div class="navBar__brand">
-            <a class="navBar__brand--icon"></a>
+            <a class="navBar__brand--icon"><i class="fa-solid fa-location-dot"></i></a>
             <p class="navBar__brand--name">Dream Trip</p>
           </div>
           <div class="navBar__bell">
@@ -40,7 +40,12 @@
         </nav>
         <section id="idHeroSection" class="hero__section">
           <search id="idSearch" class="hero__search">
-            <form action=""></form>
+            <form>
+              <a class="hero__search--icon"></a>
+              <label>
+                <input type="search" name="search" autocomplete="on">
+              </label>
+            </form>
           </search>
           <a id="heroBtn" class="hero__btn"></a>
         </section>
@@ -65,7 +70,7 @@
     </div>
 
     <!-- === Screen Website Page === -->
-    <div id="navDisplay" class="navigation__display"></div>
+   <!--  <div id="navDisplay" class="navigation__display"></div> -->
   
   <!-- === Javascript === -->
   <script src="../js/main.js"></script>

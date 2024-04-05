@@ -1,0 +1,156 @@
+/** === === Mobile Responsive === === */
+@media (max-width: 375px) {
+ .home__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+ }
+ .home__icons--time, .mobile__icons {
+  font-size: 1rem;
+  font-weight: 700;
+ }
+ .home__icons--mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .navBar__logo--figure {
+  width: 2.5rem;
+  height: 2.5rem;
+ }
+ .navBar__brand {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+ }
+ .navBar__brand--icon {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  color: var(--clr-principal);
+ }
+ .navBar__brand--name {
+  font-size: 1.6rem;
+  font-weight: 700;
+ }
+ .navBar__bell--icon {
+  font-size: 1.6rem;
+ }
+ .navBar__bell--icon:active {
+  color: var(--clr-principal);
+ }
+ .hero__btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+ }
+
+ /* ==== Navigation Menu ==== */
+ .nav__bar {
+  height: 8rem;
+  bottom: 0;
+ }
+ .menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ }
+ .menu__list--nav {
+  font-size: 2rem;
+  filter: brightness(0.5);
+ }
+ .menu__list--nav:hover {
+  filter: brightness(1);
+  color: var(--clr-principal);
+ }
+ .menu__list--nav:active {
+  color: var(--clr-principal);
+ }
+
+}
+
+@media (min-width: 376px) and (max-width: 460px) {
+  .home__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   }
+   .home__icons--time, .mobile__icons {
+    font-size: 1rem;
+    font-weight: 700;
+   }
+   .home__icons--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .navBar__logo--figure {
+    width: 3rem;
+    height: 3rem;
+   }
+   .navBar__brand {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+   }
+   .navBar__brand--icon {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    color: var(--clr-principal);
+   }
+   .navBar__brand--name {
+    font-size: 1.6rem;
+    font-weight: 700;
+   }
+   .navBar__bell--icon {
+    font-size: 1.6rem;
+   }
+   .navBar__bell--icon:active {
+    color: var(--clr-principal);
+   }
+
+   /* === Menu Navigation Fixed === */
+   .nav__bar {
+    height: 8rem;
+    bottom: 0;
+   }
+   .menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   }
+   .menu__list--nav {
+    font-size: 2rem;
+   }
+   .menu__list--nav:active {
+    color: var(--clr-principal);
+   }
+}
+@media (min-width: 461px) and (max-width: 640px){}
+
+/** ==== === Tablet Responsive === ==== */
+@media (min-width: 768px) {
+  .home__header {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 1024px) {}
+
+/** ====== === Screen Responsive === ====== */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1280px) {}
+@media (min-width: 1281px) and (max-width: 1920px) {}
+@media (min-width: 1536px) {}
+@media (min-width: 1920px) {}

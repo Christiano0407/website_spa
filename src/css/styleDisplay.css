@@ -242,10 +242,67 @@ button:active, wrapper__btn:active {
 
 /* ======== ==== == Display == ==== ======== */
 .navigation__mobile {
-  width: 100%;
-  position: relative;
+  width: var(--width);
+  position: var(--relative);
 }
 .nav__bar {
+  width: var(--width);
+  position: var(--absolute);
+}
+.home__header {
+  width: var(--width);
+  padding: var(--padding);
+}
+.home__icons--time, .mobile__icons {
+  color: #333;
+}
+.home__icons {
+  width: var(--width);
+  margin: 1rem auto;
+}
+.home__icons--mobile {
+  width: 6rem;
+}
+.navBar {
+  width: var(--width);
+  padding: var(--padding);
+  margin: 1rem auto;
+}
+.navBar__logo--img {
+  border-radius: 0.8rem;
+}
+.hero__btn {
+  border-radius: 0.8rem;
+  border: none;
+  outline: none;
+  background: var(--clr-principal);
+  color: var(--clr-white-one);
+}
+.hero__btn:hover {
+  background: var(--clr-white-one);
+  color: var(--clr-principal);
+}
+.hero__btn:active {
+  transform: scale(0.9);
+}
+
+/* ==== Display ==== */
+.home__display {
   width: 100%;
-  position: absolute;
+  padding: 1rem;
+}
+
+/* === Navigation Bar Menu === */
+.nav__bar {
+  width: 100%;
+  position: fixed;
+ /*  border: 2px solid red; */
+  box-shadow: 2px 2px 15px #333;
+  z-index: 1;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+}
+.nav__header, .nav__header--menu, .menu__list {
+  width: 100%;
+  height: 100%;
 }
