@@ -3,12 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <meta name="description" content="Landing Page Website Travel">
+  <meta name="chris" content="website & mobile">
+  <meta name="dream Trip" content="Dream Trip Landing Page">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/icons/Dream Trip.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/styleDisplay.css">
+  <link rel="stylesheet" href="../css/display_responsive.css">
+  <title>Dream Trip || Website Travel || Mobile & Display</title>
 </head>
 <body>
-  <main id="idHome" class="home">
-    <h1>New Page</h1>
-  </main>
+    <!-- ==== Mobile Website Page ==== -->
+    <div id="navMobile" class="navigation__mobile">
+      <header id="idHomeHeader" class="home__header">
+        <div class="home__icons">
+          <span class="home__icons--time">7:30</span>
+          <div class="home__icons--mobile">
+            <a class="mobile__icons"><i class="fa-solid fa-signal"></i></a>
+            <a class="mobile__icons"><i class="fa-solid fa-wifi"></i></a>
+            <a class="mobile__icons"><i class="fa-solid fa-battery-three-quarters"></i></a>
+          </div>
+        </div>
+        <nav id="idNavBar" class="navBar">
+          <div class="navBar__logo">
+            <figure class="navBar__logo--figure">
+              <img class="navBar__logo--img">
+            </figure>
+          </div>
+          <div class="navBar__brand">
+            <a class="navBar__brand--icon"></a>
+            <p class="navBar__brand--name">Dream Trip</p>
+          </div>
+          <div class="navBar__bell">
+            <a class="navBar__bell--icon"><i class="fa-regular fa-bell"></i></a>
+          </div>
+        </nav>
+        <section id="idHeroSection" class="hero__section">
+          <search id="idSearch" class="hero__search"></search>
+          <a id="heroBtn" class="hero__btn"></a>
+        </section>
+      </header>
+      <!-- === Always Changes Display === -->
+      <main id="displayMobile" class="home__display"></main>
+
+      <!-- ==== Menu Nav Bar Navigation ==== -->
+      <div id="idNavigation" class="nav__bar">
+         <header class="nav__header">
+          <nav class="nav__header--menu">
+            <ul class="menu__list">
+              <a class="menu__list--nav home"><i class="fa-solid fa-house"></i></a>
+              <a class="menu__list--nav trip"><i class="fa-solid fa-location-dot"></i></a>
+              <a class="menu__list--nav travels"><i class="fa-solid fa-compass"></i></a>
+              <a class="menu__list--nav like"><i class="fa-solid fa-heart"></i></a>
+              <a class="menu__list--nav count"><i class="fa-solid fa-gear"></i></a>
+            </ul>
+          </nav>
+         </header>
+      </div>
+    </div>
+
+    <!-- === Screen Website Page === -->
+    <div id="navDisplay" class="navigation__display"></div>
   
   <!-- === Javascript === -->
   <script src="../js/main.js"></script>
