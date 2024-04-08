@@ -1,23 +1,25 @@
 //*? === Algorithms === */
 
 export const bubbleSort = (array, proveFunc) => {
-  //let d = d.length; 
-  let swapped;
+  let n = array.length; 
+  let swapped = true; 
 
-  while(swapped) {
-    let swapped = false; 
+  while (swapped) {
+    swapped = false; 
 
-    for(let i = 0; i <= array; i++) {
-      if(proveFunc(array[i - 1] > array[i])) {
-          const temp = array[i - 1];
-          array[i - 1] = array[i]; 
-          array[i] = temp; 
-          swapped = true;
+    for (let i = 1; i < n; i++) {
+      if (proveFunc(array[i - 1], array[i])) { 
+        const temp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = temp;
+        swapped = true;
       }
     }
+    n--;
   }
 
   return array;
-}
+};
 
-const binarySearch = () => {}
+
+const binarySearch = (array, valueToFind, key) => {}

@@ -7,25 +7,16 @@ const navMenu = document.querySelector("#idNavigation");
 const btnMenu = document.querySelectorAll(".menu__list--nav");
 
 
-
 const dataTrip = async () => {
   try {
     //const data = await readFile(new URL('../data/data.json', import.meta.url));
     const response = await fetch('../data/data.json');
     if(response.status === 200) {
-      const data = await response.json()
-      console.log(data);
-
-      const showData = (d) => {
-        for (const item of d) {
-          console.log(item); 
-        }
-      }
-
-      showData(data); // From JSON
-
-      const dataNew = bubbleSort(data, (a, b) => a.trip_Id > b.trip_Id ); 
-      console.log(dataNew.map(newData =>  newData.trip_Id ));  // From Algorithm
+      const data = await response.json();
+      console.log(data); // Call Data Base
+      
+      const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
+      console.log("Order Id: ", dataSorted); // add Algorithm
       
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
@@ -37,6 +28,13 @@ const dataTrip = async () => {
 }
 
 dataTrip();
+/* const showData = (d) => {
+  for (const item of d) {
+    console.log(item); // Implement display logic here
+  }
+};
+
+showData(data); */
 
 
 document.addEventListener('DOMContentLoaded', () => { 
