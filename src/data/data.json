@@ -1,4 +1,6 @@
-[
+{ 
+  "data": [
+
     {
         "Trip ID": 1,
         "Destination": "London, UK",
@@ -374,4 +376,5 @@
         "Transportation type": "Train",
         "Transportation cost": 100
     }
-]
+  ] 
+}
