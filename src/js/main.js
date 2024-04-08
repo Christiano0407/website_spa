@@ -1,4 +1,6 @@
 //import { readFile } from "fs/promises"; //Get Of System File 
+import { bubbleSort } from "../algorithm/bubble.sort.js";
+
 const navMobile = document.querySelector("#navMobile"); 
 const displayMobile = document.querySelector("#displayMobile");
 const navMenu = document.querySelector("#idNavigation"); 
@@ -20,9 +22,12 @@ const dataTrip = async () => {
         }
       }
 
-      showData(data);
+      showData(data); // From JSON
+
+      const dataNew = bubbleSort(data, (a, b) => a.trip_Id > b.trip_Id ); 
+      console.log(dataNew.map(newData =>  newData.trip_Id ));  // From Algorithm
       
-    }else {
+    } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
     }
    

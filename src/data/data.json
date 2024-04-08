@@ -2,7 +2,7 @@
   "data": [
 
     {
-        "Trip ID": 1,
+        "trip_Id": 1,
         "Destination": "London, UK",
         "Start date": "5/1/2023",
         "End date": "5/8/2023",
@@ -17,7 +17,7 @@
         "Transportation cost": 600
     },
     {
-        "Trip ID": 2,
+        "trip_Id": 2,
         "Destination": "Phuket, Thailand",
         "Start date": "6/15/2023",
         "End date": "6/20/2023",
@@ -32,7 +32,7 @@
         "Transportation cost": 500
     },
     {
-        "Trip ID": 3,
+        "trip_Id": 3,
         "Destination": "Bali, Indonesia",
         "Start date": "7/1/2023",
         "End date": "7/8/2023",
@@ -47,7 +47,7 @@
         "Transportation cost": 700
     },
     {
-        "Trip ID": 4,
+        "trip_Id": 4,
         "Destination": "New York, USA",
         "Start date": "8/15/2023",
         "End date": "8/29/2023",
@@ -62,7 +62,7 @@
         "Transportation cost": 1000
     },
     {
-        "Trip ID": 5,
+        "trip_Id": 5,
         "Destination": "Tokyo, Japan",
         "Start date": "9/10/2023",
         "End date": "9/17/2023",
@@ -77,7 +77,7 @@
         "Transportation cost": 200
     },
     {
-        "Trip ID": 6,
+        "trip_Id": 6,
         "Destination": "Paris, France",
         "Start date": "10/5/2023",
         "End date": "10/10/2023",
@@ -92,7 +92,7 @@
         "Transportation cost": 800
     },
     {
-        "Trip ID": 7,
+        "trip_Id": 7,
         "Destination": "Sydney, Australia",
         "Start date": "11/20/2023",
         "End date": "11/30/2023",
@@ -107,7 +107,7 @@
         "Transportation cost": 1200
     },
     {
-        "Trip ID": 8,
+        "trip_Id": 8,
         "Destination": "Rio de Janeiro, Brazil",
         "Start date": "1/5/2024",
         "End date": "1/12/2024",
@@ -122,7 +122,7 @@
         "Transportation cost": 600
     },
     {
-        "Trip ID": 9,
+        "trip_Id": 9,
         "Destination": "Amsterdam, Netherlands",
         "Start date": "2/14/2024",
         "End date": "2/21/2024",
@@ -137,7 +137,7 @@
         "Transportation cost": 200
     },
     {
-        "Trip ID": 10,
+        "trip_Id": 10,
         "Destination": "Dubai, United Arab Emirates",
         "Start date": "3/10/2024",
         "End date": "3/17/2024",
@@ -152,7 +152,7 @@
         "Transportation cost": 800
     },
     {
-        "Trip ID": 11,
+        "trip_Id": 11,
         "Destination": "Cancun, Mexico",
         "Start date": "4/1/2024",
         "End date": "4/8/2024",
@@ -167,7 +167,7 @@
         "Transportation cost": 500
     },
     {
-        "Trip ID": 12,
+        "trip_Id": 12,
         "Destination": "Barcelona, Spain",
         "Start date": "5/15/2024",
         "End date": "5/22/2024",
@@ -182,7 +182,7 @@
         "Transportation cost": 100
     },
     {
-        "Trip ID": 13,
+        "trip_Id": 13,
         "Destination": "Honolulu, Hawaii",
         "Start date": "6/10/2024",
         "End date": "6/18/2024",
@@ -197,7 +197,7 @@
         "Transportation cost": 1200
     },
     {
-        "Trip ID": 14,
+        "trip_Id": 14,
         "Destination": "Berlin, Germany",
         "Start date": "7/1/2024",
         "End date": "7/10/2024",
@@ -212,7 +212,7 @@
         "Transportation cost": 700
     },
     {
-        "Trip ID": 15,
+        "trip_Id": 15,
         "Destination": "Marrakech, Morocco",
         "Start date": "8/20/2024",
         "End date": "8/27/2024",
@@ -227,7 +227,7 @@
         "Transportation cost": 400
     },
     {
-        "Trip ID": 16,
+        "trip_Id": 16,
         "Destination": "Edinburgh, Scotland",
         "Start date": "9/5/2024",
         "End date": "9/12/2024",
@@ -242,7 +242,7 @@
         "Transportation cost": 150
     },
     {
-        "Trip ID": 17,
+        "trip_Id": 17,
         "Destination": "Paris",
         "Start date": "9/1/2023",
         "End date": "9/10/2023",
@@ -257,7 +257,7 @@
         "Transportation cost": 400
     },
     {
-        "Trip ID": 18,
+        "trip_Id": 18,
         "Destination": "Bali",
         "Start date": "8/15/2023",
         "End date": "8/25/2023",
@@ -272,7 +272,7 @@
         "Transportation cost": 700
     },
     {
-        "Trip ID": 19,
+        "trip_Id": 19,
         "Destination": "London",
         "Start date": "7/22/2023",
         "End date": "7/28/2023",
@@ -287,7 +287,7 @@
         "Transportation cost": 150
     },
     {
-        "Trip ID": 20,
+        "trip_Id": 20,
         "Destination": "Tokyo",
         "Start date": "10/5/2023",
         "End date": "10/15/2023",
@@ -302,7 +302,7 @@
         "Transportation cost": 800
     },
     {
-        "Trip ID": 21,
+        "trip_Id": 21,
         "Destination": "New York",
         "Start date": "11/20/2023",
         "End date": "11/25/2023",
@@ -317,7 +317,7 @@
         "Transportation cost": 100
     },
     {
-        "Trip ID": 22,
+        "trip_Id": 22,
         "Destination": "Sydney",
         "Start date": "12/5/2023",
         "End date": "12/12/2023",
@@ -332,7 +332,7 @@
         "Transportation cost": 600
     },
     {
-        "Trip ID": 23,
+        "trip_Id": 23,
         "Destination": "Rome",
         "Start date": "11/1/2023",
         "End date": "11/8/2023",
@@ -347,7 +347,7 @@
         "Transportation cost": 80
     },
     {
-        "Trip ID": 24,
+        "trip_Id": 24,
         "Destination": "Bangkok",
         "Start date": "9/15/2023",
         "End date": "9/23/2023",
@@ -362,7 +362,7 @@
         "Transportation cost": 500
     },
     {
-        "Trip ID": 25,
+        "trip_Id": 25,
         "Destination": "Paris",
         "Start date": "12/22/2023",
         "End date": "12/28/2023",
