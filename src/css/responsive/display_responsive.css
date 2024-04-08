@@ -71,7 +71,16 @@
  .menu__list--nav:active {
   color: var(--clr-principal);
  }
-
+ .hero__icon {
+  font-size: 1.2rem;
+ }
+ .hero__btn--text {
+  font-size: 1.2rem;
+  font-weight: 500;
+ }
+ .hero__formulary {
+  width: 70%;
+ }
 }
 
 @media (min-width: 376px) and (max-width: 460px) {
@@ -136,7 +145,22 @@
    .menu__list--nav:active {
     color: var(--clr-principal);
    }
+   .hero__icon {
+    font-size: 1.4rem;
+   }
+   .hero__btn {
+    padding: 1rem;
+    margin-left: 1rem;
+   }
+   .hero__btn--text {
+    font-size: 1.4rem;
+    font-weight: 600;
+   }
+   .hero__formulary {
+    width: 80%;
+   }
 }
+
 @media (min-width: 461px) and (max-width: 640px){}
 
 /** ==== === Tablet Responsive === ==== */

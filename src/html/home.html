@@ -40,14 +40,16 @@
         </nav>
         <section id="idHeroSection" class="hero__section">
           <search id="idSearch" class="hero__search">
-            <form>
-              <a class="hero__search--icon"></a>
-              <label>
-                <input type="search" name="search" autocomplete="on">
+            <form class="hero__formulary">
+              <a class="hero__icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a class="hero__icon"><i class="fa-solid fa-arrow-left none"></i></a>
+              <label class="hero__label">
+                <input id="idSearchInput" class="hero__input" type="search" name="search" autocomplete="on">
               </label>
             </form>
+            <a class="hero__icon"><i class="fa-solid fa-microphone"></i></a>
+            <a id="heroBtn" class="hero__btn"><span class="hero__btn--text">Search</span></a>
           </search>
-          <a id="heroBtn" class="hero__btn"></a>
         </section>
       </header>
       <!-- === Always Changes Display === -->

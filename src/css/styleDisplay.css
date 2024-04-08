@@ -281,6 +281,7 @@ button:active, wrapper__btn:active {
 .hero__btn:hover {
   background: var(--clr-white-one);
   color: var(--clr-principal);
+  cursor: pointer;
 }
 .hero__btn:active {
   transform: scale(0.9);
@@ -305,4 +306,33 @@ button:active, wrapper__btn:active {
 .nav__header, .nav__header--menu, .menu__list {
   width: 100%;
   height: 100%;
+}
+
+/* === Hero Search ===*/
+.hero__section {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+.hero__search {
+ width: 100%;
+ display: flex;
+ align-items: center;
+}
+.hero__label {
+  margin: 0 1rem;
+}
+.hero__formulary {
+  display: flex;
+  align-items: center;
+}
+.hero__input {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  width: 100%;
+}
+.hero__label {
+  width: 100%;
 }
