@@ -1,20 +1,34 @@
 //*? === ==== Patterns Design ==== === */
 // - Define Pattern Design -
-class AbstractFactory {
-  createDestination(keyword){}; 
-  createFlight(keyword){};
-  createLodging(keyword){};
+const Destination = {
+   getDestinyDetails: function() { }
 }; 
 
-// - Implement Pattern -
-export class ConcreteFactory extends AbstractFactory {
-  constructor(data) {
-    super(); 
-    this.data = data; 
+const Travel = {
+  getLodgingDetails: function () {},
+  getTransportDetails: function() {} 
+};
+
+
+const CityDestination = Object.create(Destination);  
+CityDestination.constructor = CityDestination; 
+
+function CityDestination(destinationData) {
+  const trimmedData = []; 
+  for (const key in destinationData) {
+    trimmedData[key] = destinationData[key].trim(); 
   }
-  createDestination(keyword) {
-    return this.data.filter(item => item.Destination.toLowerCase().includes(keyword.toLowerCase())); 
-  }; 
-  createFlight(keyword) {}; 
-  createLodging(keyword) {};
-}; 
+  return  {
+    getDestinyDetail: function() {
+      return `
+        <div class="destination__data">
+          <h2>${this.destinationData.Destination}</h2>
+          <p>Traveler: ${trimmedData.TravelerName}</p>
+          <p>Start Date: ${trimmedData.StartDate}</p>
+          <p>End Date: ${trimmedData.EndDate}</p>
+          <p>Duration: ${trimmedData.Duration} days</p>
+        </div>
+      `;  
+    } 
+  }
+};    

@@ -1,6 +1,6 @@
 //import { readFile } from "fs/promises"; //Get Of System File 
 import { bubbleSort, binarySearch } from "../algorithm/algorithms.js";
-import { ConcreteFactory } from "../poo/patternsDesign.js";
+import { CityDestination, LodgingAccommodation, TransportTravel  } from "../poo/patternsDesign.js";
 
 const navMobile = document.querySelector("#navMobile"); 
 const displayTravel = document.querySelector("#displayTravel"); 
@@ -21,19 +21,6 @@ const TripDestinationAndFlight = async (keywords) => {
 
       const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
       console.log("Order Id: ", dataSorted); // add: - Algorithm & Data Structure -
-
-      const factory = new ConcreteFactory(dataSorted); 
-      const destination = factory.createDestination(keywords); 
-      const flights = factory.createFlight(keywords);
-      const lodging = factory.createLodging(keywords);
-
-      const searchTravel = binarySearch(dataSorted, keywords.toLowerCase());
-      const destinyIndex = binarySearch(destination, keywords.toLowerCase()); 
-      const flightsIndex = binarySearch(flights, keywords); 
-      const lodgingIndex = binarySearch(lodging, keywords);
-
-      console.log("Search Travel:", searchTravel);  
-      console.log(destination[destinyIndex]);
       
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
@@ -56,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
    btnSearch.addEventListener("click", (e) => {
     e.preventDefault();
     const keyword = inputKey.value; 
-    TripDestinationAndFlight(keyword);
    })
 }); 
 
