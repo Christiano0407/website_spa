@@ -23,7 +23,7 @@ export const bubbleSort = (array, proveFunc) => {
 };
 
 //** === Alg: BinarySearch === */
-const binarySearch = (array, keyword) => {
+export const binarySearch = (array, keyword) => {
   let minIndex = 0; 
   let maxIndex = array.length - 1; 
   let middleElement, middleValue; 
@@ -37,7 +37,7 @@ const binarySearch = (array, keyword) => {
     } else if(middleElement < keyword.toLowerCase()) {
       minIndex = middleValue + 1; 
     } else {
-      maxIndex = middleValue + 1; 
+      maxIndex = middleValue - 1; 
     }
   }
   return -1;
