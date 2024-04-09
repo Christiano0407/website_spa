@@ -27,12 +27,13 @@ const TripDestinationAndFlight = async (keywords) => {
       const flights = factory.createFlight(keywords);
       const lodging = factory.createLodging(keywords);
 
-      const searchTravel = binarySearch(dataSorted, keywords);
-      const destinyIndex = binarySearch(destination, keywords); 
+      const searchTravel = binarySearch(dataSorted, keywords.toLowerCase());
+      const destinyIndex = binarySearch(destination, keywords.toLowerCase()); 
       const flightsIndex = binarySearch(flights, keywords); 
       const lodgingIndex = binarySearch(lodging, keywords);
 
-      console.log(destination[destinyIndex]); 
+      console.log("Search Travel:", searchTravel);  
+      console.log(destination[destinyIndex]);
       
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
@@ -50,16 +51,12 @@ const TripDestinationAndFlight = async (keywords) => {
 };
 
 showData(data); */
-//*? === Input Value === */
-const keywordCall = (event) => {
-  const keyword = event.target.value;
-  TripDestinationAndFlight(keyword);
-}; 
-
 //*? === Btn Search Display === */
 document.addEventListener("DOMContentLoaded", () => {
-   btnSearch.addEventListener("click", () => {
-    inputKey.addEventListener("input", keywordCall); 
+   btnSearch.addEventListener("click", (e) => {
+    e.preventDefault();
+    const keyword = inputKey.value; 
+    TripDestinationAndFlight(keyword);
    })
 }); 
 

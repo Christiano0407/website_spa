@@ -32,7 +32,7 @@ export const binarySearch = (array, keyword) => {
     middleValue = Math.floor((minIndex + maxIndex) / 2); 
     middleElement = array[middleValue];
 
-    if(middleElement === keyword.toLowerCase()) {
+    if(middleElement === keyword) {
       return middleValue; 
     } else if(middleElement < keyword.toLowerCase()) {
       minIndex = middleValue + 1; 
