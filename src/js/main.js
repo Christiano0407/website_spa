@@ -1,6 +1,6 @@
 //import { readFile } from "fs/promises"; //Get Of System File 
 import { bubbleSort, binarySearch } from "../algorithm/algorithms.js";
-import { CityDestination, LodgingAccommodation, TransportTravel  } from "../poo/patternsDesign.js";
+import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
 
 const navMobile = document.querySelector("#navMobile"); 
 const displayTravel = document.querySelector("#displayTravel"); 
@@ -19,8 +19,15 @@ const TripDestinationAndFlight = async (keywords) => {
       const data = await response.json();
       console.log(data); // Call Data Base
 
+      const keyword = inputKey.value; // - Call Input Value -
+      // - Algorithms -
       const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
       console.log("Order Id: ", dataSorted); // add: - Algorithm & Data Structure -
+      const searchKeyword = binarySearch(dataSorted, keyword);
+      // - Patterns Designs - 
+      const destination = CityDestination(searchKeyword);
+      const lodging = TravelLodging(searchKeyword); 
+      const transport = TravelTransport(searchKeyword);
       
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
@@ -42,7 +49,7 @@ showData(data); */
 document.addEventListener("DOMContentLoaded", () => {
    btnSearch.addEventListener("click", (e) => {
     e.preventDefault();
-    const keyword = inputKey.value; 
+    TripDestinationAndFlight(); 
    })
 }); 
 
