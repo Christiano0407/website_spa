@@ -1,47 +1,42 @@
-//*? === ==== Patterns Design ==== === */
+//*? === ==== Patterns Design - (Create: Class or Prototype) - ==== === */
 // - Define Pattern Design -
-const Destination = {
-   getDestinyDetails: function() { }
+class Destination {
+   constructor(destinationData) {
+     this.destinationData = destinationData
+   }
+
+   getDestinyDetail() {
+    throw new Error("Sorry! Method not identified.")
+   }
 }; 
 
-const Travel = {
+/* const Travel = {
   getLodgingDetails: function () {},
   getTransportDetails: function() {} 
-};
+}; */
 
-
-const CityDestination = Object.create(Destination);  
-CityDestination.constructor = CityDestination; 
-
-const TravelLodging = Object.create(Travel); 
-TravelLodging.constructor = TravelLodging; 
-
-const TravelTransport = Object.create(Travel);
-TravelTransport.constructor = TravelTransport; 
-
-
-export function cityDestination(destinationData) {
-  const trimmedData = []; 
-  for (const key in destinationData) {
-    trimmedData[key] = destinationData[key].trim(); 
-  }
-  return  {
-    getDestinyDetail: function() {
-      return `
-        <div class="destination__data">
-          <h2>${trimmedData.Destination}</h2>
-          <p>Traveler: ${trimmedData.TravelerName}</p>
-          <p>Start Date: ${trimmedData.StartDate}</p>
-          <p>End Date: ${trimmedData.EndDate}</p>
-          <p>Duration: ${trimmedData.Duration} days</p>
-        </div>
-      `;  
-    } 
-  }
+ export class CityDestination extends Destination {
+  constructor(destinationData) {
+    super(destinationData); 
+    this.destinationData = Object.fromEntries(
+      Object.entries(this.destinationData).map(([key, value]) => [key,value.trim()])
+    )
+  }; 
+  getDestinyDetail() {
+    return `
+      <div class="destination__data">
+        <h2>${trimmedData.Destination}</h2>
+        <p>Traveler: ${trimmedData.TravelerName}</p>
+        <p>Start Date: ${trimmedData.StartDate}</p>
+        <p>End Date: ${trimmedData.EndDate}</p>
+        <p>Duration: ${trimmedData.Duration} days</p>
+      </div>
+    `;  
+  } 
 };    
 
 
-export function travelLodging(dataTravel) {
+/* export function travelLodging(dataTravel) {
   const trimmedData = []; 
   for(const key in dataTravel) {
     trimmed[key] = dataTravel[key].trim(); 
@@ -76,4 +71,6 @@ export function travelTransport(dataTransport) {
       `; 
     }
   }
-}; 
+};  */
+
+//** ==== Use Class ==== */

@@ -21,12 +21,14 @@ const tripDestinationAndFlight = async (keywords) => {
       // - Algorithms -
       const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
       console.log("Order Id: ", dataSorted); // add: - Algorithm & Data Structure -
+     
       const searchKeyword = binarySearch(dataSorted, keywords.toLowerCase());
 
       if(searchKeyword !== - 1) {
+
         const matchTravel = dataSorted[searchKeyword]; 
         
-        const cityData = {
+        const cityDestinationData = {
           Destination: matchTravel.destination,
           TravelName: matchTravel.travelName,
           StartDate: matchTravel.startDate,
@@ -47,10 +49,11 @@ const tripDestinationAndFlight = async (keywords) => {
         }; 
 
         // - Patterns Designs - 
-        const destination = cityDestination(cityData);
-        const lodging = travelLodging(lodgingData); 
-        const transport = travelTransport(TransportData);
-        console.log({destination,lodging,transport });
+        const destination = new cityDestination(cityDestinationData);
+        //const lodging = travelLodging(lodgingData); 
+        //const transport = travelTransport(TransportData);
+        
+        const detailsDestination = destination.getDestinyDetail();
       };
 
       displayTravel.innerHTML = ""; 
@@ -63,8 +66,14 @@ const tripDestinationAndFlight = async (keywords) => {
         navMobile.classList.remove("none"); 
       }; 
 
-      displayTravel.insertAdjacentHTML(`${destination}${lodging}${transport}`);
-      
+      //const display = document.createElement("div");
+      /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
+      //displayTravel.appendChild(display);
+      displayTravel.innerHTML += destination;
+      displayTravel.innerHTML += lodging;
+      displayTravel.innerHTML += transport;
+      //displayTravel.appendChild(combinedHTML); 
+
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
     }
