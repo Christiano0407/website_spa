@@ -1,76 +1,87 @@
 //*? === ==== Patterns Design - (Create: Class or Prototype) - ==== === */
-// - Define Pattern Design -
+// - Define Pattern Design & Use Class Import: Main -
 class Destination {
    constructor(destinationData) {
-     this.destinationData = destinationData
-   }
+     this.destinationData = destinationData; 
+   }; 
 
    getDestinyDetail() {
-    throw new Error("Sorry! Method not identified.")
-   }
+    throw new Error("Sorry! Method not identified."); 
+   }; 
 }; 
 
-/* const Travel = {
-  getLodgingDetails: function () {},
-  getTransportDetails: function() {} 
-}; */
+
+class Travel {
+  constructor(dataTravel) {
+   this.dataTravel = dataTravel; 
+  }; 
+
+  getLodgingDetails() {
+    throw new Error("Sorry! Error to Get Data Lodging Travel"); 
+  }; 
+
+  getTransportDetails() {
+    throw new Error("Sorry! Error to Get Data Transport Travel"); 
+  };  
+};
+
 
  export class CityDestination extends Destination {
   constructor(destinationData) {
     super(destinationData); 
     this.destinationData = Object.fromEntries(
       Object.entries(this.destinationData).map(([key, value]) => [key,value.trim()])
-    )
+    ); 
   }; 
   getDestinyDetail() {
     return `
       <div class="destination__data">
-        <h2>${trimmedData.Destination}</h2>
-        <p>Traveler: ${trimmedData.TravelerName}</p>
-        <p>Start Date: ${trimmedData.StartDate}</p>
-        <p>End Date: ${trimmedData.EndDate}</p>
-        <p>Duration: ${trimmedData.Duration} days</p>
+        <h2>${this.destinationData.Destination}</h2>
+        <p>Traveler: ${this.destinationData.TravelerName}</p>
+        <p>Start Date: ${this.destinationData.StartDate}</p>
+        <p>End Date: ${this.destinationData.EndDate}</p>
+        <p>Duration: ${this.destinationData.Duration} days</p>
       </div>
     `;  
   } 
 };    
 
 
-/* export function travelLodging(dataTravel) {
-  const trimmedData = []; 
-  for(const key in dataTravel) {
-    trimmed[key] = dataTravel[key].trim(); 
-  }
-  return {
-    getLodgingDetails: function() {
-      return `
-        <div class="travel__destiny">
-          <h2>${trimmedData.Destination}</h2>
-          <p>${trimmedData.AccommodationType}</p>
-          <p>${trimmedData.AccommodationCost}</p>
-        </div>
-      `; 
-    }
+export class TravelLodging extends Travel {
+  constructor(dataTravel) {
+    super(dataTravel); 
+    this.dataTravel = Object.fromEntries(
+      Object.entries(this.dataTravel).map(([key, value]) => [key,value.trim()])
+    ); 
+  }; 
+  
+  getLodgingDetails() {
+    return `
+      <div class="travel__destiny">
+        <h2>${this.dataTravel.Destination}</h2>
+        <p>${this.dataTravel.AccommodationType}</p>
+        <p>${this.dataTravel.AccommodationCost}</p>
+      </div>
+    `; 
   }
 }; 
 
 
-export function travelTransport(dataTransport) {
-  const trimmedData = []; 
-  for(const key in dataTransport) {
-    trimmedData[key] = dataTransport[key].trim(); 
-  }
-  return  {
-    getTransportDetails: function() {
-      return ` 
-      <div class="travel__destiny">
-        <h2>${trimmedData.Destination}</h2>
-        <p>${trimmedData.TransportationType}</p>
-        <p>${trimmedData.TransportationCost}</p>
-      </div>
-      `; 
-    }
-  }
-};  */
+export class TravelTransport extends Travel {
+  constructor(dataTransport) {
+    super(dataTransport); 
+    this.dataTransport = Object.fromEntries(
+      Object.entries(this.dataTransport).map(([key, value]) => [key, value.trim()])
+    ); 
+  }; 
 
-//** ==== Use Class ==== */
+  getTransportDetails() {
+    return ` 
+      <div class="travel__destiny">
+        <h2>${this.dataTransport.Destination}</h2>
+        <p>${this.dataTransport.TransportationType}</p>
+        <p>${this.dataTransport.TransportationCost}</p>
+      </div>
+    `; 
+  }
+}; 

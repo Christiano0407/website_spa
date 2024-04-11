@@ -1,6 +1,7 @@
 //import { readFile } from "fs/promises"; //Get Of System File 
 import { bubbleSort, binarySearch } from "../algorithm/algorithms.js";
-import { cityDestination, travelLodging, travelTransport } from "../poo/patternsDesign.js";
+import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
+
 
 const navMobile = document.querySelector("#navMobile"); 
 const displayTravel = document.querySelector("#displayTravel"); 
@@ -9,6 +10,7 @@ const navMenu = document.querySelector("#idNavigation");
 const btnMenu = document.querySelectorAll(".menu__list--nav");
 const btnSearch = document.querySelector("#heroBtn"); 
 const inputKey = document.querySelector("#idSearchInput");
+
 
 //*? === Function Call all Data Travel === */
 const tripDestinationAndFlight = async (keywords) => {
@@ -27,7 +29,7 @@ const tripDestinationAndFlight = async (keywords) => {
       if(searchKeyword !== - 1) {
 
         const matchTravel = dataSorted[searchKeyword]; 
-        
+        // - Object Pattern Design -
         const cityDestinationData = {
           Destination: matchTravel.destination,
           TravelName: matchTravel.travelName,
@@ -49,11 +51,13 @@ const tripDestinationAndFlight = async (keywords) => {
         }; 
 
         // - Patterns Designs - 
-        const destination = new cityDestination(cityDestinationData);
-        //const lodging = travelLodging(lodgingData); 
-        //const transport = travelTransport(TransportData);
+        const destination = new CityDestination(cityDestinationData);
+        const lodging = new TravelLodging(lodgingData); 
+        const transport = new TravelTransport(TransportData);
         
         const detailsDestination = destination.getDestinyDetail();
+        const detailsLodging = lodging.getLodgingDetails();
+        const detailsTransport = transport.getTransportDetails();
       };
 
       displayTravel.innerHTML = ""; 
@@ -66,13 +70,12 @@ const tripDestinationAndFlight = async (keywords) => {
         navMobile.classList.remove("none"); 
       }; 
 
-      //const display = document.createElement("div");
+      const display = document.createElement("div");
       /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
-      //displayTravel.appendChild(display);
-      displayTravel.innerHTML += destination;
-      displayTravel.innerHTML += lodging;
-      displayTravel.innerHTML += transport;
-      //displayTravel.appendChild(combinedHTML); 
+      displayTravel.innerHTML += detailsDestination;
+      displayTravel.innerHTML += detailsLodging;
+      displayTravel.innerHTML += detailsTransport;
+      display.appendChild(displayTravel); 
 
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
