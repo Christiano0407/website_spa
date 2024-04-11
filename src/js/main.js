@@ -12,19 +12,32 @@ const btnSearch = document.querySelector("#heroBtn");
 const inputKey = document.querySelector("#idSearchInput");
 
 
+//*? === Btn Search Display === */
+document.addEventListener("DOMContentLoaded", () => {
+  btnSearch.addEventListener("click", async (e) => {
+   e.preventDefault();
+   // - Call Input Value -
+   const keyword = inputKey.value.trim();
+   console.log(keyword); 
+   await tripDestinationAndFlight(keyword); 
+  })
+}); 
+
+
 //*? === Function Call all Data Travel === */
 const tripDestinationAndFlight = async (keywords) => {
   try {
     //const data = await readFile(new URL('../data/data.json', import.meta.url));
     const response = await fetch('../data/data.json');
-    if(response.status === 200) {
+    if(response.ok) {
       const data = await response.json();
       console.log(data); // - Call Data Base -
       // - Algorithms -
       const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
       console.log("Order Id: ", dataSorted); // add: - Algorithm & Data Structure -
      
-      const searchKeyword = binarySearch(dataSorted, keywords.toLowerCase());
+      const searchKeyword = binarySearch(dataSorted, keywords);
+      console.log(searchKeyword); 
 
       if(searchKeyword !== - 1) {
 
@@ -58,24 +71,33 @@ const tripDestinationAndFlight = async (keywords) => {
         const detailsDestination = destination.getDestinyDetail();
         const detailsLodging = lodging.getLodgingDetails();
         const detailsTransport = transport.getTransportDetails();
+        
+        displayTravel.innerHTML = "";
+        const combinedDetails = `
+        ${detailsDestination}
+        ${detailsLodging}
+        ${detailsTransport}
+        `;
+        /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
+        //displayTravel.innerHTML += detailsTransport;
+        const display = document.createElement("div");
+        display.innerHTML = combinedDetails; 
+        display.innerHTML = ""; 
+        displayTravel.appendChild(display);
+      } else {
+        displayTravel.innerHTML = "No matching data found.";
+        displayTravel.classList.remove("none");
       };
 
-      displayTravel.innerHTML = ""; 
-
-      if(navMobile) {
-        navMobile.classList.add("none"); 
-        displayTravel.classList.remove("none")
+      if (navMobile) {
+          displayTravel.classList.add("display"); 
+          navMobile.classList.add("none"); 
+          displayTravel.classList.remove("none"); 
       } else {
-        displayTravel.classList.add("none")
-        navMobile.classList.remove("none"); 
+          displayTravel.classList.add("none"); 
+          navMobile.classList.remove("none"); 
+          //displayTravel.classList.remove("display"); 
       }; 
-
-      const display = document.createElement("div");
-      /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
-      displayTravel.innerHTML += detailsDestination;
-      displayTravel.innerHTML += detailsLodging;
-      displayTravel.innerHTML += detailsTransport;
-      display.appendChild(displayTravel); 
 
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 
@@ -85,24 +107,6 @@ const tripDestinationAndFlight = async (keywords) => {
     console.error("Error to Read Data Json", err);
   }
 }; 
-
-/* const showData = (d) => {
-  for (const item of d) {
-    console.log(item); // Implement display logic here
-  }
-};
-
-showData(data); */
-//*? === Btn Search Display === */
-document.addEventListener("DOMContentLoaded", () => {
-   btnSearch.addEventListener("click", (e) => {
-    e.preventDefault();
-    // - Call Input Value -
-    const keyword = inputKey.value;
-    console.log(keyword); 
-    tripDestinationAndFlight(keyword); 
-   })
-}); 
 
 //*? === Btn Menu Bar === */
 document.addEventListener('DOMContentLoaded', () => { 

@@ -26,7 +26,7 @@ class Travel {
 };
 
 
- export class CityDestination extends Destination {
+export class CityDestination extends Destination {
   constructor(destinationData) {
     super(destinationData); 
     this.destinationData = Object.fromEntries(
