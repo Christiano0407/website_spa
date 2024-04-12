@@ -51,7 +51,7 @@ const tripDestinationAndFlight = async (keywords) => {
         // - Object Pattern Design -
         const cityDestinationData = {
           Destination: matchTravel.Destination,
-          TravelName: matchTravel["Traveler name"],
+          TravelerName: matchTravel["Traveler name"],
           StartDate: matchTravel["Start date"],
           EndDate: matchTravel["End date"],
           Duration: matchTravel["Duration (days)"],
@@ -59,14 +59,14 @@ const tripDestinationAndFlight = async (keywords) => {
 
         const lodgingData = {
           Destination: matchTravel.Destination,
-          AccomodationType: matchTravel["Accommodation type"],
-          AccomodationCost: matchTravel["Accommodation cost"],
+          AccommodationType: matchTravel["Accommodation type"],
+          AccommodationCost: matchTravel["Accommodation cost"],
         }; 
 
         const TransportData = {
           Destination: matchTravel.Destination,
-          TransportType: matchTravel["Transportation type"],
-          TransportCost: matchTravel["Transportation cost"],
+          TransportationType: matchTravel["Transportation type"],
+          TransportationCost: matchTravel["Transportation cost"],
         }; 
 
         // - Patterns Designs - 

@@ -69,9 +69,9 @@ export class TravelLodging extends Travel {
   getLodgingDetails() {
     return `
       <div class="travel__destiny">
-        <h2>${this.dataTravel.Destination}</h2>
-        <p>${this.dataTravel.AccommodationType}</p>
-        <p>${this.dataTravel.AccommodationCost}</p>
+        <h2>Destination:${this.dataTravel.Destination}</h2>
+        <p>AccommodationType:${this.dataTravel.AccommodationType}</p>
+        <p>AccommodationCost:${this.dataTravel.AccommodationCost}</p>
       </div>
     `; 
   }
@@ -94,9 +94,9 @@ export class TravelTransport extends Travel {
   getTransportDetails() {
     return ` 
       <div class="travel__destiny">
-        <h2>${this.dataTravel.Destination}</h2>
-        <p>${this.dataTravel.TransportationType}</p>
-        <p>${this.dataTravel.TransportationCost}</p>
+        <h2>Destination: ${this.dataTravel.Destination}</h2>
+        <p>TransportationType: ${this.dataTravel.TransportationType}</p>
+        <p>TransportationCost: ${this.dataTravel.TransportationCost}</p>
       </div>
     `; 
   }
