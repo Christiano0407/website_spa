@@ -1,8 +1,8 @@
 /** === === Mobile Responsive === === */
 @media (max-width: 375px) {
- /* .travel__display {
+/*  .travel__display {
   display: none;
- } */
+ }  */
  .home__icons {
   display: flex;
   justify-content: space-between;
@@ -168,16 +168,16 @@
 }
 
 @media (min-width: 461px) and (max-width: 640px){
-  .travel__display {
+  /* .travel__display {
     display: none;
-  }
+  } */
 }
 
 /** ==== === Tablet Responsive === ==== */
 @media (min-width: 768px) {
-  .travel__display {
+ /*  .travel__display {
     display: none;
-  }
+  } */
   .home__header {
     display: none;
   }

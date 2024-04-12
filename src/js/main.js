@@ -3,6 +3,7 @@ import { bubbleSort, binarySearch } from "../algorithm/algorithms.js";
 import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
 
 
+/* const displayTravel =document.getElementById("displayTravel").style.display = "block"; */
 const navMobile = document.querySelector("#navMobile"); 
 const displayTravel = document.querySelector("#displayTravel"); 
 const displayMobile = document.querySelector("#displayMobile");
@@ -10,6 +11,7 @@ const navMenu = document.querySelector("#idNavigation");
 const btnMenu = document.querySelectorAll(".menu__list--nav");
 const btnSearch = document.querySelector("#heroBtn"); 
 const inputKey = document.querySelector("#idSearchInput");
+const btnBackDisplay = document.getElementById("btnBackDisplay");
 
 
 //*? === Btn Search Display === */
@@ -20,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
    const keyword = inputKey.value.trim();
    console.log(keyword); 
    await tripDestinationAndFlight(keyword); 
+
+   if (navMobile && !navMobile.classList.contains("none")) {
+     displayTravel.classList.remove("none"); 
+     displayTravel.classList.add("display"); 
+     navMobile.classList.add("none"); 
+  }else {
+     displayTravel.classList.add("none"); 
+     displayTravel.classList.remove("display"); 
+     navMobile.classList.remove("none"); 
+  }; 
   })
 }); 
 
@@ -94,15 +106,15 @@ const tripDestinationAndFlight = async (keywords) => {
         displayTravel.classList.remove("none");
       };
 
-      if (navMobile) {
-          //displayTravel.classList.add("display"); 
-          displayTravel.classList.remove("none"); 
-          navMobile.classList.add("none"); 
-      } else {
-          displayTravel.classList.add("none"); 
-          navMobile.classList.remove("none"); 
-          //displayTravel.classList.remove("display"); 
-      }; 
+     /*  if (navMobile && !navMobile.classList.contains("none")) {
+        navMobile.classList.add("none"); 
+        displayTravel.classList.remove("none"); 
+        displayTravel.classList.add("display"); 
+      }else {
+        displayTravel.classList.add("none"); 
+        navMobile.classList.remove("none"); 
+        displayTravel.classList.remove("display"); 
+      };  */
 
     } else {
       throw new Error(`Error to Get Data, ${response.status}`); 

@@ -240,16 +240,11 @@ button:active, wrapper__btn:active {
   display:none;
 }
 
-.travel__display {
-  color: #111;
-  font-size: 1.6rem;
-  font-weight: 900;
-}
-
 /* ======== ==== == Display == ==== ======== */
 .navigation__mobile {
   width: var(--width);
   position: var(--relative);
+  /* display: block; */
 }
 .nav__bar {
   width: var(--width);
@@ -343,7 +338,22 @@ button:active, wrapper__btn:active {
   width: 100%;
 }
 /* === New Display Data === */
+.travel__display {
+  width: var(--width);
+  position: relative;
+  display: none;
+}
 .display__data {
   width: 100%;
   padding: 1rem;
+  position: absolute;
+}
+.destiny__data, .travel__destiny, .travel__transport {
+  width: var(--width);
+}
+.btn__display--back {
+  padding: 2rem;
+  background: red;
+  color: white;
+  position: absolute;
 }
