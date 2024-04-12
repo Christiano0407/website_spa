@@ -83,12 +83,11 @@ const tripDestinationAndFlight = async (keywords) => {
         ${detailsLodging}
         ${detailsTransport}
         `;
-        /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
-        //displayTravel.innerHTML += detailsTransport;
+        
         const display = document.createElement("div");
+        display.innerHTML = ""; 
         display.className = "display__data"; 
         display.innerHTML = combinedDetails; 
-        display.innerHTML = ""; 
         displayTravel.appendChild(display);
       } else {
         displayTravel.innerHTML = "No matching data found.";
