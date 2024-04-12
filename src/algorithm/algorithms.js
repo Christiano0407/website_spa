@@ -49,9 +49,9 @@ export function binarySearch(dataSorted, searchKeyword) {
   while (startIndex <= endIndex) {
     const middleIndex = Math.floor((startIndex + endIndex) / 2);
 
-    if (dataSorted[middleIndex].destination === searchKeyword) {
+    if (dataSorted[middleIndex] === searchKeyword) {
       return middleIndex;
-    } else if (dataSorted[middleIndex].destination > searchKeyword) {
+    } else if (dataSorted[middleIndex] > searchKeyword) {
      
       endIndex = middleIndex - 1;
     } else {

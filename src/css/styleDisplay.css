@@ -240,6 +240,12 @@ button:active, wrapper__btn:active {
   display:none;
 }
 
+.travel__display {
+  color: #111;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
 /* ======== ==== == Display == ==== ======== */
 .navigation__mobile {
   width: var(--width);

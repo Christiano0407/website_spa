@@ -35,32 +35,38 @@ const tripDestinationAndFlight = async (keywords) => {
       // - Algorithms -
       const dataSorted = bubbleSort(Array.isArray(data.data) ? [...data.data] : [], (a, b) => a.trip_Id > b.trip_Id);
       console.log("Order Id: ", dataSorted); // add: - Algorithm & Data Structure -
-     
-      const searchKeyword = binarySearch(dataSorted, keywords);
-      console.log(searchKeyword); 
+      /* const searchKeyword = binarySearch(dataSorted, keywords);
+      console.log(searchKeyword);  */
+      
+      let matchTravel = null; 
+      let normalizedKeywords = keywords.toLowerCase().trim(); 
+      matchTravel = dataSorted.find(item => {
+        const normalizedDestination = item.Destination.toLowerCase().trim();
+        return normalizedDestination === normalizedKeywords;
+      });
+      
 
-      if(searchKeyword !== - 1) {
+      if(matchTravel) {
 
-        const matchTravel = dataSorted[searchKeyword]; 
         // - Object Pattern Design -
         const cityDestinationData = {
-          Destination: matchTravel.destination,
-          TravelName: matchTravel.travelName,
-          StartDate: matchTravel.startDate,
-          EndDate: matchTravel.endDate,
-          Duration: matchTravel.Duration,
+          Destination: matchTravel.Destination,
+          TravelName: matchTravel["Traveler name"],
+          StartDate: matchTravel["Start date"],
+          EndDate: matchTravel["End date"],
+          Duration: matchTravel["Duration (days)"],
         }; 
 
         const lodgingData = {
-          Destination: matchTravel.destination,
-          AccomodationType: matchTravel.accomodationType,
-          AccomodationCost: matchTravel.accomodationCost,
+          Destination: matchTravel.Destination,
+          AccomodationType: matchTravel["Accommodation type"],
+          AccomodationCost: matchTravel["Accommodation cost"],
         }; 
 
         const TransportData = {
-          Destination: matchTravel.destination,
-          TransportType: matchTravel.transportType,
-          TransportCost: matchTravel.transportCost,
+          Destination: matchTravel.Destination,
+          TransportType: matchTravel["Transportation type"],
+          TransportCost: matchTravel["Transportation cost"],
         }; 
 
         // - Patterns Designs - 
@@ -72,7 +78,6 @@ const tripDestinationAndFlight = async (keywords) => {
         const detailsLodging = lodging.getLodgingDetails();
         const detailsTransport = transport.getTransportDetails();
         
-        displayTravel.innerHTML = "";
         const combinedDetails = `
         ${detailsDestination}
         ${detailsLodging}
@@ -81,6 +86,7 @@ const tripDestinationAndFlight = async (keywords) => {
         /*  display.insertAdjacentHTML(`${destination}${lodging}${transport}`); */
         //displayTravel.innerHTML += detailsTransport;
         const display = document.createElement("div");
+        display.className = "display__data"; 
         display.innerHTML = combinedDetails; 
         display.innerHTML = ""; 
         displayTravel.appendChild(display);
@@ -90,9 +96,9 @@ const tripDestinationAndFlight = async (keywords) => {
       };
 
       if (navMobile) {
-          displayTravel.classList.add("display"); 
-          navMobile.classList.add("none"); 
+          //displayTravel.classList.add("display"); 
           displayTravel.classList.remove("none"); 
+          navMobile.classList.add("none"); 
       } else {
           displayTravel.classList.add("none"); 
           navMobile.classList.remove("none"); 

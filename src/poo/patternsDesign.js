@@ -29,10 +29,16 @@ class Travel {
 export class CityDestination extends Destination {
   constructor(destinationData) {
     super(destinationData); 
+    this.destinationData = typeof destinationData === "object" ? destinationData : {};
+    console.log(this.destinationData); 
     this.destinationData = Object.fromEntries(
-      Object.entries(this.destinationData).map(([key, value]) => [key,value.trim()])
-    ); 
+      Object.entries(this.destinationData).map(([key, value]) => {
+        const trimmedValue = typeof value === 'string' ? value.trim() : value;
+        return [key, trimmedValue];
+      })
+    );
   }; 
+
   getDestinyDetail() {
     return `
       <div class="destination__data">
@@ -50,9 +56,14 @@ export class CityDestination extends Destination {
 export class TravelLodging extends Travel {
   constructor(dataTravel) {
     super(dataTravel); 
+    this.dataTravel = typeof dataTravel === "object" ? dataTravel : {}; 
+    console.log(this.dataTravel); 
     this.dataTravel = Object.fromEntries(
-      Object.entries(this.dataTravel).map(([key, value]) => [key,value.trim()])
-    ); 
+      Object.entries(this.dataTravel).map(([key, value]) => {
+        const trimmedValue = typeof value === 'string' ? value.trim() : value;
+        return [key, trimmedValue];
+      })
+    );
   }; 
   
   getLodgingDetails() {
@@ -68,19 +79,24 @@ export class TravelLodging extends Travel {
 
 
 export class TravelTransport extends Travel {
-  constructor(dataTransport) {
-    super(dataTransport); 
-    this.dataTransport = Object.fromEntries(
-      Object.entries(this.dataTransport).map(([key, value]) => [key, value.trim()])
-    ); 
+  constructor(dataTravel) {
+    super(dataTravel); 
+    this.dataTravel = typeof dataTravel === "object" ? dataTravel : {}; 
+    console.log(this.dataTravel); 
+    this.dataTravel = Object.fromEntries(
+      Object.entries(this.dataTravel).map(([key, value]) => {
+        const trimmedValues = typeof value === 'string' ? value.trim() : value;
+        return [key, trimmedValues];
+      })
+    );
   }; 
 
   getTransportDetails() {
     return ` 
       <div class="travel__destiny">
-        <h2>${this.dataTransport.Destination}</h2>
-        <p>${this.dataTransport.TransportationType}</p>
-        <p>${this.dataTransport.TransportationCost}</p>
+        <h2>${this.dataTravel.Destination}</h2>
+        <p>${this.dataTravel.TransportationType}</p>
+        <p>${this.dataTravel.TransportationCost}</p>
       </div>
     `; 
   }
