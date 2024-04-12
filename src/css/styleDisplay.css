@@ -342,3 +342,8 @@ button:active, wrapper__btn:active {
 .hero__label {
   width: 100%;
 }
+/* === New Display Data === */
+.display__data {
+  width: 100%;
+  padding: 1rem;
+}
