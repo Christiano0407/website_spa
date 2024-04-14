@@ -368,3 +368,12 @@ button:active, wrapper__btn:active {
   background: transparent;
   color: var(--clr-white-one);
 }
+.btn__pay {
+  background: var(--clr-principal);
+  color: var(--clr-white);
+  position: absolute;
+  display: flex;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+}

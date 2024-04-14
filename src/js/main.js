@@ -116,10 +116,14 @@ const tripDestinationAndFlight = async (keywords) => {
         `;
         
         const display = document.createElement("div");
+        const btnPay = document.createElement("button"); 
+        btnPay.className = "btn__pay"; 
+        btnPay.textContent = "start to adventure"
         display.innerHTML = ""; 
         display.className = "display__data"; 
         display.innerHTML = combinedDetails; 
-        displayWrapper.appendChild(display);
+        displayWrapper.append(display, btnPay);
+        /* displayWrapper.insertBefore(btnPay, displayWrapper.firstChild); */
       } else {
         displayWrapper.innerHTML = "No matching data found.";
         displayWrapper.classList.remove("none");
