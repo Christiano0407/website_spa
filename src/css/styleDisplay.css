@@ -352,15 +352,19 @@ button:active, wrapper__btn:active {
   width: 100%;
   padding: 1rem;
   /* position: absolute; */
+  display: flex;
 }
 .destiny__data, .travel__destiny, .travel__transport {
   width: var(--width);
+}
+.display__data {
+  background: var(--clr-white);
 }
 .btn__display--back {
   position: absolute;
   border-radius: 50%;
   border: none;
   outline: none;
-  background: var(--clr-saturation);
+  background: transparent;
   color: var(--clr-white-one);
 }
