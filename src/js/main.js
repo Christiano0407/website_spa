@@ -12,6 +12,7 @@ const btnMenu = document.querySelectorAll(".menu__list--nav");
 const btnSearch = document.querySelector("#heroBtn"); 
 const inputKey = document.querySelector("#idSearchInput");
 const btnBackDisplay = document.getElementById("btnBackDisplay");
+const displayWrapper = document.querySelector("#displayWrapper"); 
 
 
 //*? === Btn Search Display === */
@@ -34,14 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
    await tripDestinationAndFlight(keyword); 
   }); 
+}); 
 
+
+document.addEventListener("DOMContentLoaded", () => {
   btnBackDisplay.addEventListener("click", async (e) => {
-   e.preventDefault(); 
-    if(displayTravel.classList.contains("display")) {
-      navMobile.classList.remove("none"); 
-      displayTravel.classList.add("none"); 
-    }
-  }); 
+    e.preventDefault(); 
+     if(displayTravel.classList.contains("display")) {
+       navMobile.classList.remove("none"); 
+       navMobile.classList.add("display"); 
+       displayTravel.classList.add("none"); 
+       displayTravel.classList.remove("display"); 
+      } else {
+        displayTravel.classList.add("display"); 
+        navMobile.classList.remove("none"); 
+        navMobile.classList.add("none"); 
+     }
+   });
 }); 
 
 
@@ -109,10 +119,10 @@ const tripDestinationAndFlight = async (keywords) => {
         display.innerHTML = ""; 
         display.className = "display__data"; 
         display.innerHTML = combinedDetails; 
-        displayTravel.appendChild(display);
+        displayWrapper.appendChild(display);
       } else {
-        displayTravel.innerHTML = "No matching data found.";
-        displayTravel.classList.remove("none");
+        displayWrapper.innerHTML = "No matching data found.";
+        displayWrapper.classList.remove("none");
       };
 
      /*  if (navMobile && !navMobile.classList.contains("none")) {

@@ -1,6 +1,6 @@
+@import url('../css/responsive/display_responsive.css'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* @import url("/src/css/media_Queries.css"); */
-/* @import url("../css/responsive/display_responsive.css");  */
 
 :root{
  --clr-white: #fff;
@@ -245,7 +245,6 @@ button:active, wrapper__btn:active {
 .navigation__mobile {
   width: var(--width);
   position: var(--relative);
-  /* display: block; */
 }
 .nav__bar {
   width: var(--width);
@@ -342,12 +341,17 @@ button:active, wrapper__btn:active {
 .travel__display {
   width: var(--width);
   position: relative;
- /*  display: none; */
+ /*  display: var(--grid); */
+}
+.travel__wrapper {
+  display: grid;
+  width: var(--width);
+  height: 100vh;
 }
 .display__data {
   width: 100%;
   padding: 1rem;
-  position: absolute;
+  /* position: absolute; */
 }
 .destiny__data, .travel__destiny, .travel__transport {
   width: var(--width);

@@ -87,6 +87,7 @@
 
  /* === Display Page Changes === */
  .btn__display--back {
+  z-index: 1;
   top: 50px;
   left: 15px;
   width: 50px;
@@ -94,6 +95,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+ }
+ .travel__wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url('../img/mobile/travel_12.jpg') center/cover no-repeat;
+  object-fit: var(--cover);
+  background-position: top;
+  background-repeat: var(--no-repeat);
+  background-size: var(--cover);
+ }
+ .display__data {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
  }
 }
 
