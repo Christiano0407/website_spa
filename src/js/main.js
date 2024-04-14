@@ -21,18 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
    // - Call Input Value -
    const keyword = inputKey.value.trim();
    console.log(keyword); 
-   await tripDestinationAndFlight(keyword); 
 
    if (navMobile && !navMobile.classList.contains("none")) {
      displayTravel.classList.remove("none"); 
      displayTravel.classList.add("display"); 
      navMobile.classList.add("none"); 
-  }else {
+   }else {
      displayTravel.classList.add("none"); 
      displayTravel.classList.remove("display"); 
      navMobile.classList.remove("none"); 
-  }; 
-  })
+   }; 
+
+   await tripDestinationAndFlight(keyword); 
+  }); 
+
+  btnBackDisplay.addEventListener("click", async (e) => {
+   e.preventDefault(); 
+    if(displayTravel.classList.contains("display")) {
+      navMobile.classList.remove("none"); 
+      displayTravel.classList.add("none"); 
+    }
+  }); 
 }); 
 
 

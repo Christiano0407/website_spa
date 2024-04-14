@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* @import url("/src/css/media_Queries.css"); */
+/* @import url("../css/responsive/display_responsive.css");  */
 
 :root{
  --clr-white: #fff;
@@ -284,7 +285,7 @@ button:active, wrapper__btn:active {
   color: var(--clr-principal);
   cursor: pointer;
 }
-.hero__btn:active {
+.hero__btn:active, .btn__display--back:active {
   transform: scale(0.9);
 }
 
@@ -341,7 +342,7 @@ button:active, wrapper__btn:active {
 .travel__display {
   width: var(--width);
   position: relative;
-  display: none;
+ /*  display: none; */
 }
 .display__data {
   width: 100%;
@@ -352,8 +353,10 @@ button:active, wrapper__btn:active {
   width: var(--width);
 }
 .btn__display--back {
-  padding: 2rem;
-  background: red;
-  color: white;
   position: absolute;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--clr-saturation);
+  color: var(--clr-white-one);
 }

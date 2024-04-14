@@ -84,6 +84,17 @@
  .hero__formulary {
   width: 70%;
  }
+
+ /* === Display Page Changes === */
+ .btn__display--back {
+  top: 50px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
 }
 
 @media (min-width: 376px) and (max-width: 460px) {
