@@ -14,7 +14,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1200,
         "Transportation type": "Flight",
-        "Transportation cost": 600
+        "Transportation cost": 600, 
+        "images": {
+            "image": "../img/web/trip_web_2.jpg"
+        }
     },
     {
         "trip_Id": 2,
@@ -29,7 +32,10 @@
         "Accommodation type": "Resort",
         "Accommodation cost": 800,
         "Transportation type": "Flight",
-        "Transportation cost": 500
+        "Transportation cost": 500, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 3,
@@ -44,7 +50,10 @@
         "Accommodation type": "Villa",
         "Accommodation cost": 1000,
         "Transportation type": "Flight",
-        "Transportation cost": 700
+        "Transportation cost": 700, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 4,
@@ -59,7 +68,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 2000,
         "Transportation type": "Flight",
-        "Transportation cost": 1000
+        "Transportation cost": 1000, 
+        "images": {
+            "image": "../img/web/trip_web_1.jpg"
+        }
     },
     {
         "trip_Id": 5,
@@ -74,7 +86,10 @@
         "Accommodation type": "Airbnb",
         "Accommodation cost": 700,
         "Transportation type": "Train",
-        "Transportation cost": 200
+        "Transportation cost": 200, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 6,
@@ -89,7 +104,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1500,
         "Transportation type": "Flight",
-        "Transportation cost": 800
+        "Transportation cost": 800, 
+        "images": {
+            "image": "../img/web/trip_web_3.jpg"
+        }
     },
     {
         "trip_Id": 7,
@@ -104,7 +122,10 @@
         "Accommodation type": "Hostel",
         "Accommodation cost": 500,
         "Transportation type": "Flight",
-        "Transportation cost": 1200
+        "Transportation cost": 1200, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 8,
@@ -119,7 +140,10 @@
         "Accommodation type": "Airbnb",
         "Accommodation cost": 900,
         "Transportation type": "Flight",
-        "Transportation cost": 600
+        "Transportation cost": 600, 
+        "images": {
+            "image": "../img/web/trip_web_7.jpg"
+        }
     },
     {
         "trip_Id": 9,
@@ -134,7 +158,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1200,
         "Transportation type": "Train",
-        "Transportation cost": 200
+        "Transportation cost": 200, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 10,
@@ -149,7 +176,10 @@
         "Accommodation type": "Resort",
         "Accommodation cost": 2500,
         "Transportation type": "Flight",
-        "Transportation cost": 800
+        "Transportation cost": 800, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 11,
@@ -164,7 +194,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1000,
         "Transportation type": "Flight",
-        "Transportation cost": 500
+        "Transportation cost": 500, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 12,
@@ -179,7 +212,10 @@
         "Accommodation type": "Airbnb",
         "Accommodation cost": 800,
         "Transportation type": "Train",
-        "Transportation cost": 100
+        "Transportation cost": 100, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 13,
@@ -194,7 +230,10 @@
         "Accommodation type": "Resort",
         "Accommodation cost": 3000,
         "Transportation type": "Flight",
-        "Transportation cost": 1200
+        "Transportation cost": 1200, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 14,
@@ -209,7 +248,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1400,
         "Transportation type": "Flight",
-        "Transportation cost": 700
+        "Transportation cost": 700, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 15,
@@ -224,7 +266,10 @@
         "Accommodation type": "Riad",
         "Accommodation cost": 600,
         "Transportation type": "Flight",
-        "Transportation cost": 400
+        "Transportation cost": 400, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 16,
@@ -239,7 +284,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 900,
         "Transportation type": "Train",
-        "Transportation cost": 150
+        "Transportation cost": 150, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 17,
@@ -254,7 +302,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 900,
         "Transportation type": "Plane",
-        "Transportation cost": 400
+        "Transportation cost": 400, 
+        "images": {
+            "image": "../img/web/trip_web_3.jpg"
+        }
     },
     {
         "trip_Id": 18,
@@ -269,7 +320,10 @@
         "Accommodation type": "Resort",
         "Accommodation cost": 1500,
         "Transportation type": "Plane",
-        "Transportation cost": 700
+        "Transportation cost": 700, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 19,
@@ -284,7 +338,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1200,
         "Transportation type": "Train",
-        "Transportation cost": 150
+        "Transportation cost": 150, 
+        "images": {
+            "image": "../img/web/trip_web_2.jpg"
+        }
     },
     {
         "trip_Id": 20,
@@ -299,7 +356,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1200,
         "Transportation type": "Plane",
-        "Transportation cost": 800
+        "Transportation cost": 800, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 21,
@@ -314,7 +374,10 @@
         "Accommodation type": "Airbnb",
         "Accommodation cost": 600,
         "Transportation type": "Bus",
-        "Transportation cost": 100
+        "Transportation cost": 100, 
+        "images": {
+            "image": "../img/web/trip_web_1.jpg"
+        }
     },
     {
         "trip_Id": 22,
@@ -329,7 +392,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1000,
         "Transportation type": "Plane",
-        "Transportation cost": 600
+        "Transportation cost": 600, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 23,
@@ -344,7 +410,10 @@
         "Accommodation type": "Airbnb",
         "Accommodation cost": 700,
         "Transportation type": "Train",
-        "Transportation cost": 80
+        "Transportation cost": 80, 
+        "images": {
+            "image": "../img/web/trip_web_4.jpg"
+        }
     },
     {
         "trip_Id": 24,
@@ -359,7 +428,10 @@
         "Accommodation type": "Hostel",
         "Accommodation cost": 400,
         "Transportation type": "Plane",
-        "Transportation cost": 500
+        "Transportation cost": 500, 
+        "images": {
+            "image": "../img/mobile/travel_3.jpg"
+        }
     },
     {
         "trip_Id": 25,
@@ -374,7 +446,10 @@
         "Accommodation type": "Hotel",
         "Accommodation cost": 1400,
         "Transportation type": "Train",
-        "Transportation cost": 100
+        "Transportation cost": 100, 
+        "images": {
+            "image": "../img/web/trip_web_3.jpg"
+        }
     }
   ] 
 }

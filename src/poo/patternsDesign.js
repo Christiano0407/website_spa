@@ -26,6 +26,17 @@ class Travel {
 };
 
 
+class Home {
+  constructor(dataHome) {
+    this.dataHome = dataHome; 
+  }; 
+
+  getHomeDetails() {
+   throw new Error("Error! Error to Get Data Information Home");  
+  }; 
+}; 
+
+
 export class CityDestination extends Destination {
   constructor(destinationData) {
     super(destinationData); 
@@ -100,4 +111,36 @@ export class TravelTransport extends Travel {
       </div>
     `; 
   }
+}; 
+
+
+export class HomePageTravel extends Home {
+  constructor(dataHome) {
+    super(dataHome); 
+    this.dataHome = typeof dataHome === "object" ? dataHome : {}; 
+    this.dataHome = Object.fromEntries(
+      Object.entries(this.dataHome).map(({key, value}) => {
+        const valueTrim = typeof value === "string" ? value.trim() : value; 
+        return [key, valueTrim]; 
+      })
+    )
+  }; 
+  
+  getHomeDetails() {
+    return `
+      <div id="homeCard" class="home__card">
+         <figure class="home__card--figure">
+            <img class="" alt="" src=${this.dataHome.images.image}>
+         </figure>
+         <div class="home__card--text">
+            <h2 class="title__destiny">${this.dataHome.Destination}</h2>
+            <div class="home__card--pay">
+              <p class="title__transport">${this.dataHome.TransportationType}</p>
+              <span class="trip__pay">$ ${this.dataHome.TransportationCost}</span>
+            </div>
+         </div>
+      </div>
+    `; 
+  }
+
 }; 
