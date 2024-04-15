@@ -4,8 +4,6 @@ import { HomePageTravel } from "../../poo/patternsDesign";
 
 
 const displayMobile = document.querySelector("#displayMobile");
-const navMenu = document.querySelector("#idNavigation"); 
-const menuHome = document.querySelector("#menuHome"); 
 
 
 export const displayHome = async () => {
@@ -49,7 +47,8 @@ export const displayHome = async () => {
       displayMobile.appendChild(displayCards); 
 
     } else {
-
+      displayMobile.innerHTML = "Not Data founded"; 
+      displayMobile.classList.remove("none");
     }
  
   }catch(err) {

@@ -1,6 +1,7 @@
 //import { readFile } from "fs/promises"; //Get Of System File 
 import { bubbleSort } from "../algorithm/algorithms.js";
 import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
+import { displayHome } from "./pages/home.js";
 
 
 /* const displayTravel =document.getElementById("displayTravel").style.display = "block"; */
@@ -12,6 +13,8 @@ const inputKey = document.querySelector("#idSearchInput");
 const btnBackDisplay = document.getElementById("btnBackDisplay");
 const displayWrapper = document.querySelector("#displayWrapper"); 
 const displayMobile = document.querySelector("#displayMobile");
+const navMenu = document.querySelector("#idNavigation"); 
+const menuHome = document.querySelector("#menuHome"); 
 
 
 //*? === Btn Search Display === */
