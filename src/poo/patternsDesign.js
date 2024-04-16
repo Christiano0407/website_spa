@@ -117,18 +117,26 @@ export class TravelTransport extends Travel {
 export class HomePageTravel extends Home {
   constructor(dataHome) {
     super(dataHome); 
+    this.dataHome = {}; 
+
+    for (const key in dataHome) {
+      if(Object.hasOwnProperty.call(dataHome, key)) {
+        const value = dataHome[key]; 
+        const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
+        this.dataHome[camelCaseKey] = typeof value === "string" ? value.trim() : value; 
+      }
+    }
     //this.dataHome = typeof dataHome === "object" ? dataHome : {}; 
-    this.dataHome = Object.fromEntries(
+    /* this.dataHome = Object.fromEntries(
       Object.entries(dataHome).map(({key, value}) => {
         if(key) {
           const valueTrim = typeof value === "string" ? value.trim() : value; 
-          const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
+          const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase());
           return [camelCaseKey, valueTrim];
         }
         return null; 
-        //return [key, valueTrim]; 
-      }).filter(element => element !== null) // Filtrar las entradas que sean null
-    )
+      }).filter(element => element !== null)
+    ) */
   }; 
   
   getHomeDetails() {

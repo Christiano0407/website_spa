@@ -21,9 +21,9 @@ export const displayHome = async () => {
         sortedData.forEach(item => {
             const homePageData = {
                 Destination: item.Destination,
-                transportationType: item["Accommodation type"],
-                transportationCost: item["Accommodation Cost"],
-                images: item["images"],
+                transportationType: item.AccommodationType,
+                transportationCost: item.AccommodationCost,
+                images: item.images,
             };
 
             const homeTravel = new HomePageTravel(homePageData); 
