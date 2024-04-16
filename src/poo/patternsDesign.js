@@ -117,22 +117,26 @@ export class TravelTransport extends Travel {
 export class HomePageTravel extends Home {
   constructor(dataHome) {
     super(dataHome); 
-    this.dataHome = typeof dataHome === "object" ? dataHome : {}; 
+    //this.dataHome = typeof dataHome === "object" ? dataHome : {}; 
     this.dataHome = Object.fromEntries(
-      Object.entries(this.dataHome).map(({key, value}) => {
-        const valueTrim = typeof value === "string" ? value.trim() : value; 
-        const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
-        return [camelCaseKey, valueTrim];
+      Object.entries(dataHome).map(({key, value}) => {
+        if(key) {
+          const valueTrim = typeof value === "string" ? value.trim() : value; 
+          const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
+          return [camelCaseKey, valueTrim];
+        }
+        return null; 
         //return [key, valueTrim]; 
-      })
+      }).filter(element => element !== null) // Filtrar las entradas que sean null
     )
   }; 
   
   getHomeDetails() {
+    const imgSrc = this.dataHome.images && this.dataHome.images.image ? this.dataHome.images.image : ''; 
     return `
       <div id="homeCard" class="home__card">
          <figure class="home__card--figure">
-            <img class="home__card--img" alt="" src=${this.dataHome.images.image}>
+            <img class="home__card--img" alt="" src=${imgSrc}>
          </figure>
          <div class="home__card--text">
             <h2 class="title__destiny"> destination: ${this.dataHome.Destination}</h2>
