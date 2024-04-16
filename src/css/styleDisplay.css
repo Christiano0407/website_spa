@@ -233,12 +233,21 @@ button:active, wrapper__btn:active {
   transform: scale(0.9);
 }
 
+/* ==== Active & Display ==== */
 .display {
   display:block;
 }
 
 .none {
   display:none;
+}
+
+.active {
+  background: var(--clr-secondary);
+  color: #fff;
+  padding: 1rem;
+  border: 2px solid var(--clr-principal);
+  border-radius: 50%;
 }
 
 /* ======== ==== == Display == ==== ======== */

@@ -3,18 +3,19 @@ import { bubbleSort } from "../algorithm/algorithms.js";
 import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
 import { displayHome } from "./pages/home.js";
 
-
 /* const displayTravel =document.getElementById("displayTravel").style.display = "block"; */
 const navMobile = document.querySelector("#navMobile"); 
 const displayTravel = document.querySelector("#displayTravel"); 
-const btnMenu = document.querySelectorAll(".menu__list--nav");
+const btnMenu = document.querySelectorAll("menu__list--nav");
 const btnSearch = document.querySelector("#heroBtn"); 
 const inputKey = document.querySelector("#idSearchInput");
 const btnBackDisplay = document.getElementById("btnBackDisplay");
 const displayWrapper = document.querySelector("#displayWrapper"); 
 const displayMobile = document.querySelector("#displayMobile");
+console.log(displayMobile); 
 const navMenu = document.querySelector("#idNavigation"); 
 const menuHome = document.querySelector("#menuHome"); 
+/* const mainDisplayMobile = document.querySelector("#displayMainMobile"); */
 
 
 //*? === Btn Search Display === */
@@ -38,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
    await tripDestinationAndFlight(keyword); 
   }); 
 }); 
+
+displayHome(); 
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -148,14 +151,22 @@ const tripDestinationAndFlight = async (keywords) => {
   }catch(err) {
     console.error("Error to Read Data Json", err);
   }
-}; 
+};
 
-//*? === Btn Menu Bar === */
-document.addEventListener('DOMContentLoaded', () => { 
-   btnMenu.forEach((btn) => {
+
+//*? === Btn Menu Bar && Display Content === */
+/* document.addEventListener('DOMContentLoaded', () => { 
+  displayMobile.innerHTML = "";  
+  btnMenu.forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log("Click Menu");
+      btnMenu.forEach(item => {
+        item.classList.remove("active"); 
+      }); 
+      e.target.classList.add("active"); 
+      displayMobile.innerHTML = ""; 
+      const homePageContent = displayHome(); 
+      displayMobile.appendChild(homePageContent);  
      });
    });
-}); 
+});  */

@@ -121,7 +121,9 @@ export class HomePageTravel extends Home {
     this.dataHome = Object.fromEntries(
       Object.entries(this.dataHome).map(({key, value}) => {
         const valueTrim = typeof value === "string" ? value.trim() : value; 
-        return [key, valueTrim]; 
+        const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
+        return [camelCaseKey, valueTrim];
+        //return [key, valueTrim]; 
       })
     )
   }; 
@@ -130,13 +132,13 @@ export class HomePageTravel extends Home {
     return `
       <div id="homeCard" class="home__card">
          <figure class="home__card--figure">
-            <img class="" alt="" src=${this.dataHome.images.image}>
+            <img class="home__card--img" alt="" src=${this.dataHome.images.image}>
          </figure>
          <div class="home__card--text">
-            <h2 class="title__destiny">${this.dataHome.Destination}</h2>
+            <h2 class="title__destiny"> destination: ${this.dataHome.Destination}</h2>
             <div class="home__card--pay">
-              <p class="title__transport">${this.dataHome.TransportationType}</p>
-              <span class="trip__pay">$ ${this.dataHome.TransportationCost}</span>
+              <p class="title__transport"> transportationType:${this.dataHome.transportationType}</p>
+              <span class="trip__pay">$ transportationCost: ${this.dataHome.transportationCost}</span>
             </div>
          </div>
       </div>
