@@ -155,7 +155,7 @@ const tripDestinationAndFlight = async (keywords) => {
 
 
 //*? === Btn Menu Bar && Display Content === */
-/* document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => { 
   displayMobile.innerHTML = "";  
   btnMenu.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -169,4 +169,4 @@ const tripDestinationAndFlight = async (keywords) => {
       displayMobile.appendChild(homePageContent);  
      });
    });
-});  */
+}); 

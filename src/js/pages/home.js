@@ -5,6 +5,7 @@ import { HomePageTravel } from '../../poo/patternsDesign.js';
 
 const displayMobile = document.querySelector("#displayMobile");
 const mainDisplayMobile = document.querySelector("#displayMainMobile"); 
+const plusMobile = document.querySelector("#displayMobilePlus"); 
 
 
 export const displayHome = async () => {
@@ -31,14 +32,21 @@ export const displayHome = async () => {
             const detailsHome = `${detailsHomePage}`;  
 
             const displayCards = document.createElement("div"); 
+            const displayCardsPlus = document.createElement("div"); 
             displayCards.className = "home__displayCard"; 
+            displayCardsPlus.className = "home__displayCardPlus"; 
             displayCards.innerHTML = detailsHome;
+            displayCardsPlus.innerHTML = detailsHome;
             displayMobile.appendChild(displayCards); 
-        });
+            plusMobile.append(displayCardsPlus); 
+        })
 
         if (sortedData.length === 0) {
             displayMobile.innerHTML = "No data found.";
             displayMobile.classList.remove("none");
+
+            plusMobile.innerHTML = "No data found.";
+            plusMobile.classList.remove("none");
         }
     } else {
         throw new Error("Failed to Fetch Data"); 

@@ -312,6 +312,7 @@ button:active, wrapper__btn:active {
   z-index: 1;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
+  background: #f2f2f2;
 }
 .nav__header, .nav__header--menu, .menu__list {
   width: 100%;
@@ -386,6 +387,10 @@ button:active, wrapper__btn:active {
   border: none;
   outline: none;
 }
+/* ==== Main ==== */
+.main {
+  width: 100%;
+}
 
 /* === ==== Display Mobile & Scroll ==== === */
 .homeMain__display {
@@ -453,4 +458,19 @@ button:active, wrapper__btn:active {
   border: none;
   outline: none;
   border-radius: 0.8rem;
+ }
+ .homeDisplay__recommendation {
+  width: 100%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ .display__scrollPlus {
+  width: 100vw;
+ }
+ .homeMain__displayPlus {
+  display: grid;
+  width: 100vw;
  }

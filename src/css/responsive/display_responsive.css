@@ -185,6 +185,24 @@
     padding: 1rem 3rem;
     margin: 0.5rem 0;
   }
+  .homeDisplay__recommendation {
+    padding: 1rem;
+  }
+  .recommendation__text {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .recommendation__all {
+    font-size: 1.4rem;
+    font-weight: 500;
+    filter: brightness(0.5);
+  }
+  .homeMain__displayPlus {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 376px) and (max-width: 460px) {
@@ -336,7 +354,7 @@
  }
  .display__scroll {
   width: 1750vw;
-  height: 32.5rem;
+  height: 35rem;
  }
  .home__card {
    display: flex;
@@ -365,7 +383,24 @@
     padding: 1rem 3rem;
     margin: 0.5rem 0;
   }
-
+  .homeDisplay__recommendation {
+    padding: 1rem;
+  }
+  .recommendation__text {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .recommendation__all {
+    font-size: 1.4rem;
+    font-weight: 500;
+    filter: brightness(0.5);
+  }
+  .homeMain__displayPlus {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 1rem;
+  }
 }
 
 @media (min-width: 461px) and (max-width: 640px){
@@ -381,6 +416,12 @@
    display: flex;
    flex-direction: column;
  }
+ .homeMain__displayPlus {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
 }
 
 /** ==== === Tablet Responsive === ==== */
