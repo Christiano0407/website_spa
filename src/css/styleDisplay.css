@@ -389,7 +389,6 @@ button:active, wrapper__btn:active {
 
 /* === ==== Display Mobile & Scroll ==== === */
 .homeMain__display {
-  margin: 2rem auto;
   width: 100%;
   overflow: scroll;
 }
@@ -421,4 +420,37 @@ button:active, wrapper__btn:active {
   border: none;
   outline: none;
   box-shadow: 2px 2px 5px #333;
+  overflow: hidden;
 }
+.home__card--figure {
+  width: 100%;
+ }
+ .home__card--text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+ }
+ .title__destiny {
+  font-weight: 900;
+ }
+ .home__card--pay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+ .title__transport {
+  width: 100%;
+ }
+ .home__card--img {
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+ }
+ .tripBtn__pay {
+  background-color: var(--clr-principal);
+  color: var(--clr-white-one);
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+ }

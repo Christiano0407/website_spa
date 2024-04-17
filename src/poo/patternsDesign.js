@@ -147,10 +147,11 @@ export class HomePageTravel extends Home {
             <img class="home__card--img" alt="" src=${imgSrc}>
          </figure>
          <div class="home__card--text">
-            <h2 class="title__destiny"> destination: ${this.dataHome.Destination}</h2>
+            <h2 class="title__destiny">${this.dataHome.Destination}</h2>
             <div class="home__card--pay">
-              <p class="title__transport"> transportationType:${this.dataHome.transportationType}</p>
-              <span class="trip__pay">$ transportationCost: ${this.dataHome.transportationCost}</span>
+              <p class="title__transport">Lodging Trip: ${this.dataHome.transportationType}</p>
+              <span class="trip__pay">Lodging Cost: $${this.dataHome.transportationCost}</span>
+              <button class="tripBtn__pay">Pay</button>
             </div>
          </div>
       </div>

@@ -76,6 +76,7 @@
  }
  .hero__icon {
   font-size: 1.2rem;
+  margin-right: 0.5;
  }
  .hero__btn--text {
   font-size: 1.2rem;
@@ -150,6 +151,9 @@
  }
 
  /* ===== Scrolling ===== */
+ .homeMain__display {
+  margin: 1rem auto;
+ }
  .display__scroll {
   width: 1750vw;
   height: 30rem;
@@ -159,7 +163,28 @@
    flex-direction: column;
    border-radius: 0.8rem;
  }
-
+  .home_-card--text {
+    height: 10rem;
+    padding: 0.5rem;
+  }
+  .title__destiny {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  .title__transport {
+    margin: 0.5rem auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .trip__pay {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  .tripBtn__pay {
+    padding: 1rem 3rem;
+    margin: 0.5rem 0;
+  }
 }
 
 @media (min-width: 376px) and (max-width: 460px) {
@@ -231,7 +256,7 @@
     font-size: 1.4rem;
    }
    .hero__btn {
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-left: 1rem;
    }
    .hero__btn--text {
@@ -306,14 +331,40 @@
  }
 
  /* ===== Scrolling ===== */
+ .homeMain__display {
+  margin: 1rem auto;
+ }
  .display__scroll {
-  width: 1500vw;
-  width: 350vw;
+  width: 1750vw;
+  height: 32.5rem;
  }
  .home__card {
    display: flex;
    flex-direction: column;
+   border-radius: 0.8rem;
  }
+  .home_-card--text {
+    height: 10rem;
+    padding: 0.5rem;
+  }
+  .title__destiny {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  .title__transport {
+    margin: 0.5rem auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .trip__pay {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  .tripBtn__pay {
+    padding: 1rem 3rem;
+    margin: 0.5rem 0;
+  }
 
 }
 
