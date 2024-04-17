@@ -386,3 +386,39 @@ button:active, wrapper__btn:active {
   border: none;
   outline: none;
 }
+
+/* === ==== Display Mobile & Scroll ==== === */
+.homeMain__display {
+  margin: 2rem auto;
+  width: 100%;
+  overflow: scroll;
+}
+.homeMain__display::-webkit-scrollbar {
+  display: none;
+}
+.display__scroll {
+ overflow-x: scroll;
+ -webkit-overflow-scrolling: touch;
+ scrollbar-width: none;
+}
+.display__scroll::-webkit-scrollbar {
+  display: none;
+}
+.home__display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.home__displayCard {
+  height: 100%;
+}
+.home__card {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 5px #333;
+}
