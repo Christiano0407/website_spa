@@ -12,9 +12,12 @@ const inputKey = document.querySelector("#idSearchInput");
 const btnBackDisplay = document.getElementById("btnBackDisplay");
 const displayWrapper = document.querySelector("#displayWrapper"); 
 const displayMobile = document.querySelector("#displayMobile");
-console.log(displayMobile); 
 const navMenu = document.querySelector("#idNavigation"); 
-const menuHome = document.querySelector("#menuHome"); 
+const btnHome = document.querySelector("#menuHome"); 
+const btnTrip = document.querySelector("#menuTrip"); 
+const btnTravel = document.querySelector("#menuTravel"); 
+const btnLike = document.querySelector("#menuLike"); 
+const btnSettings = document.querySelector("#menuSettings"); 
 /* const mainDisplayMobile = document.querySelector("#displayMainMobile"); */
 
 

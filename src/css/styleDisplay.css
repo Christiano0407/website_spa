@@ -250,6 +250,8 @@ button:active, wrapper__btn:active {
   border-radius: 50%;
 }
 
+/* ==== Transitions & LazyLoading ==== */
+
 /* ======== ==== == Display == ==== ======== */
 .navigation__mobile {
   width: var(--width);
