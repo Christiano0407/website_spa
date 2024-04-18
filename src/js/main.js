@@ -13,6 +13,7 @@ const btnBackDisplay = document.getElementById("btnBackDisplay");
 const main = document.querySelector("#idMainDisplay"); 
 const displayWrapper = document.querySelector("#displayWrapper"); 
 const displayMobile = document.querySelector("#displayMobile");
+const sections = document.querySelector("#sectionsDisplay"); 
 const navMenu = document.querySelector("#idNavigation"); 
 const btnHome = document.querySelector("#menuHome"); 
 const btnTrip = document.querySelector("#menuTrip"); 
@@ -155,18 +156,29 @@ const tripDestinationAndFlight = async (keywords) => {
   }
 };
 
-//** ==== Changes Section & LazyLoading ==== */
+//*? ==== Changes Section & LazyLoading ==== */
 const changesSection = (sectionId) => {
   main.forEach(page => {
     page.classList.remove("active"); 
   })
-  main.classList.add("active"); 
+  sections.classList.add("active"); 
 
-  lazyLoading(); 
+  lazyLoading(sectionId); 
 }; 
 
 
-const lazyLoading = () => {};  
+const lazyLoading = (idSection) => {
+  try {
+    if(sections.dataset.loaded !== True) {
+       sections.dataset.loaded ="True"; 
+    } else {
+      throw new Error("To load Sections");  
+    }
+  }catch(err) {
+    console.error(`Error to get and Load your Page ${err}`); 
+  }
+  // - Add Display -
+};  
 
 
 //*? === Btn Menu Bar && Display Content === */

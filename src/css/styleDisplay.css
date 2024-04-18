@@ -248,14 +248,18 @@ button:active, wrapper__btn:active {
   padding: 1rem;
   border: 2px solid var(--clr-principal);
   border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 /* ==== Transitions & LazyLoading ==== */
-.section {
+.sections__display {
  opacity: 0;
  transform: opacity 0.5s ease;
 }
-.section.active {
+.sections__display.actives {
  opacity: 1;
 }
 
@@ -274,14 +278,14 @@ button:active, wrapper__btn:active {
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background: #ffffff;
   }
-} */
+}
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     color: #f2f2f2;
-    background-color: #111111;
+    background: #111111;
   }
 } */
 
