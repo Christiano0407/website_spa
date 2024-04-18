@@ -251,6 +251,39 @@ button:active, wrapper__btn:active {
 }
 
 /* ==== Transitions & LazyLoading ==== */
+.section {
+ opacity: 0;
+ transform: opacity 0.5s ease;
+}
+.section.active {
+ opacity: 1;
+}
+
+@keyframes lazyLoading {
+  to {
+    opacity: 0;
+    transform: opacity 0.5s ease;
+  }
+
+  from {
+   opacity: 1;
+  }
+}
+
+/* ===== Schema Colors ===== */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: #f2f2f2;
+    background-color: #111111;
+  }
+} */
 
 /* ======== ==== == Display == ==== ======== */
 .navigation__mobile {
@@ -475,4 +508,8 @@ button:active, wrapper__btn:active {
  .homeMain__displayPlus {
   display: grid;
   width: 100vw;
+ }
+
+ .sections__display {
+  width: 100%;
  }

@@ -10,6 +10,7 @@ const btnMenu = document.querySelectorAll("menu__list--nav");
 const btnSearch = document.querySelector("#heroBtn"); 
 const inputKey = document.querySelector("#idSearchInput");
 const btnBackDisplay = document.getElementById("btnBackDisplay");
+const main = document.querySelector("#idMainDisplay"); 
 const displayWrapper = document.querySelector("#displayWrapper"); 
 const displayMobile = document.querySelector("#displayMobile");
 const navMenu = document.querySelector("#idNavigation"); 
@@ -42,8 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
    await tripDestinationAndFlight(keyword); 
   }); 
 }); 
-
-displayHome(); 
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -156,8 +155,22 @@ const tripDestinationAndFlight = async (keywords) => {
   }
 };
 
+//** ==== Changes Section & LazyLoading ==== */
+const changesSection = (sectionId) => {
+  main.forEach(page => {
+    page.classList.remove("active"); 
+  })
+  main.classList.add("active"); 
+
+  lazyLoading(); 
+}; 
+
+
+const lazyLoading = () => {};  
+
 
 //*? === Btn Menu Bar && Display Content === */
+displayHome(); 
 document.addEventListener('DOMContentLoaded', () => { 
   displayMobile.innerHTML = "";  
   btnMenu.forEach(btn => {
