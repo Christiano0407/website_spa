@@ -23,6 +23,11 @@ const btnSettings = document.querySelector("#menuSettings");
 /* const mainDisplayMobile = document.querySelector("#displayMainMobile"); */
 
 
+//** === ===== Functions Get Section & Loaded ===== === */
+const sectionsLoaders = {
+  "home": displayHome,
+};
+
 //*? === Btn Search Display === */
 document.addEventListener("DOMContentLoaded", () => {
   btnSearch.addEventListener("click", async (e) => {
@@ -46,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }); 
 
 
+//*? === Back Btn */
 document.addEventListener("DOMContentLoaded", () => {
   btnBackDisplay.addEventListener("click", async (e) => {
     e.preventDefault(); 
@@ -63,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }); 
 
 
-//*? === Function Call all Data Travel === */
+//*? === Function Call all Data Travel - Search - === */
 const tripDestinationAndFlight = async (keywords) => {
   try {
     //const data = await readFile(new URL('../data/data.json', import.meta.url));
@@ -156,6 +162,11 @@ const tripDestinationAndFlight = async (keywords) => {
   }
 };
 
+
+//*? === Principal HomePage */
+const homePageContent = displayHome(); 
+displayMobile.appendChild(homePageContent); 
+
 //*? ==== Changes Section & LazyLoading ==== */
 const changesSection = (sectionId) => {
   main.forEach(page => {
@@ -181,8 +192,7 @@ const lazyLoading = (idSection) => {
 };  
 
 
-//*? === Btn Menu Bar && Display Content === */
-displayHome(); 
+//*? ==== Btn Menu Bar && Display Content === (Remember: "escalable y fácil de mantener) ==== */
 document.addEventListener('DOMContentLoaded', () => { 
   displayMobile.innerHTML = "";  
   btnMenu.forEach(btn => {
@@ -193,8 +203,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }); 
       e.target.classList.add("active"); 
       displayMobile.innerHTML = ""; 
-      const homePageContent = displayHome(); 
-      displayMobile.appendChild(homePageContent);  
+      // Obtener el ID de la sección asociada al botón
+      const sectionsId = e.target.getAttribute("data-section"); 
+      // Obtener la función de carga de contenido para la sección
+      const sectionLoader = sectionsLoaders[sectionsId];  
+
+      if (sectionLoader) { 
+        const homePageContent = displayHome(); 
+        displayMobile.appendChild(homePageContent);
+      }
+
      });
    });
 }); 
