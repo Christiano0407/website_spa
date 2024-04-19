@@ -158,7 +158,7 @@
   width: 1750vw;
   height: 30rem;
  }
- .home__card {
+ .home__card, .trip__card {
    display: flex;
    flex-direction: column;
    border-radius: 0.8rem;
@@ -203,6 +203,7 @@
     grid-auto-flow: row;
     gap: 1rem;
   }
+  /* === CSS Styles Trip === */
 }
 
 @media (min-width: 376px) and (max-width: 460px) {

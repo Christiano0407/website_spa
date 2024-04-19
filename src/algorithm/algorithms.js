@@ -64,8 +64,8 @@ export function binarySearch(dataSorted, searchKeyword) {
 }; 
 
 //** === Alg: MergeSort === */
-export function mergeSort(start, end){
-  if(Math.abs(end -  start) <= 1) return; 
+export function mergeSort(D, start, end){
+  if(Math.abs(end -  start) <= 1) return D.slice(start, end); 
   
   let mergeFrom = 0;
   let mergeTo = -1; // End To Data
@@ -73,18 +73,20 @@ export function mergeSort(start, end){
   let i; 
 
   for (width = 1; width < end; width *= 2) {
-    merge(mergeFrom, i, Math.min(i + width, end), Math.min(i + 2* width, end), mergeTo); 
+    merge(D, mergeFrom, i, Math.min(i + width, end), Math.min(i + 2* width, end), mergeTo); 
     mergeFrom = (mergeFrom === 0 ? 1 : 0); 
     mergeTo = 1 - mergeFrom; 
   }
 
   if (mergeFrom !== 0) {
-    copy(mergeFrom, mergeTo, start, end); 
+    copy(D, mergeFrom, mergeTo, start, end); 
   }
+
+  return D.slice(start, end); 
 }; 
 
 
-function merge(mergeFrom, start, middle, end, mergeTo) {
+function merge(D, mergeFrom, start, middle, end, mergeTo) {
   let i = start; 
   let j = middle; 
   let k; 
@@ -94,14 +96,14 @@ function merge(mergeFrom, start, middle, end, mergeTo) {
       D[mergeTo][k] = D[mergeFrom][i]; 
       i += 1; // List
     } else {
-      D[mergeTo] = D[mergeFrom[j]]; 
+      D[mergeTo][k] = D[mergeFrom[j]]; 
       j += 1;  // SubList
     }
   }
 }; 
 
 
-function copy(mergeFrom, mergeTo, start ,end) {
+function copy(D, mergeFrom, mergeTo, start ,end) {
   let i; 
   for (i = start; i < end; i++) {
     D[mergeTo][i] = D[mergeFrom][i]
@@ -110,6 +112,7 @@ function copy(mergeFrom, mergeTo, start ,end) {
 //mergeSort(0, D[o].length); 
 /**
  * width *= 2: Después de cada iteración, el width se duplica. Esto se hace multiplicando width por 2. Por ejemplo, si comenzamos con un width de 1, en la siguiente iteración será 2, luego 4, luego 8, y así sucesivamente. Esto nos permite dividir eficientemente el arreglo en subarreglos de tamaño potencias de 2 para la fusión.
+ * En el contexto de tu código, D parece ser el nombre de un arreglo bidimensional que contiene los datos que estás ordenando con el algoritmo Merge Sort. En la función merge, D se utiliza para acceder a los elementos de este arreglo. Aquí está la línea en cuestión:
  */
 
 

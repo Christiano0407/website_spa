@@ -2,6 +2,7 @@
 import { bubbleSort } from "../algorithm/algorithms.js";
 import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
 import { displayHome } from "./pages/home.js";
+import { tripDisplay } from "./pages/trip.js";
 
 /* const displayTravel =document.getElementById("displayTravel").style.display = "block"; */
 const navMobile = document.querySelector("#navMobile"); 
@@ -27,6 +28,7 @@ const btnSettings = document.querySelector("#menuSettings");
 const sectionsLoaders = {
   "home": displayHome,
 };
+tripDisplay(); 
 
 //*? === Btn Search Display === */
 document.addEventListener("DOMContentLoaded", () => {

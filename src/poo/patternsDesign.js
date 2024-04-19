@@ -177,6 +177,29 @@ export class TripPage extends Home {
 
   getHomeDetails() {
     const imgSrc = this.dataTrip.images && this.dataTrip.images.image ? this.dataTrip.images.image : ''; 
+    return `
+      <div id="tripCard" class="trip__card">
+         <figure class="trip__card--figure">
+            <img class="trip__card--img" alt="" src=${imgSrc}>
+         </figure>
+         <div class="trip__card--text">
+            <h2 class="title__tripDestiny">${this.dataTrip.Destination}</h2>
+            <div class="trip__card--cost">
+              <div class="trip__card__date">
+              <span class="tripDate__start">Date ${this.dataTrip.startDate}</span>
+              <span class="tripDate__end">End:${this.dataTrip.endDate}</span>
+              </div>
+              <p class=""> ${this.dataTrip.accommodationType}</p>
+              <p class=""> ${this.dataTrip.accommodationCost}</p>
+            </div>
+            <div class="trip__card--pay">
+              <p class="title__tripTransport">Lodging Trip: ${this.dataTrip.transportationType}</p>
+              <span class="trip__payment">Lodging Cost: $${this.dataTrip.transportationCost}</span>
+              <button class="tripBtn__pay">Pay</button>
+            </div>
+         </div>
+      </div>
+    `; 
   }
 
 }; 
