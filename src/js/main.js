@@ -27,8 +27,8 @@ const btnSettings = document.querySelector("#menuSettings");
 //** === ===== Functions Get Section & Loaded ===== === */
 const sectionsLoaders = {
   "home": displayHome,
+  "trip": tripDisplay, 
 };
-tripDisplay(); 
 
 //*? === Btn Search Display === */
 document.addEventListener("DOMContentLoaded", () => {

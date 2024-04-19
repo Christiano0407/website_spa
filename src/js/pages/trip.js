@@ -15,6 +15,7 @@ export const tripDisplay = async () => {
      
         const dataStructure = Array.isArray(data.data) ? [...data.data] : [];
         console.log("DsTR:", dataStructure);
+        // - Used Algorithm MergeSort -
         const dataSorted = mergeSort(dataStructure, 0, dataStructure.length); 
         console.log("Data Trip Sorted", dataSorted);
 
