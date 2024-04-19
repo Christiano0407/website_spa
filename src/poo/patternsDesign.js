@@ -159,3 +159,24 @@ export class HomePageTravel extends Home {
   }
 
 }; 
+
+
+export class TripPage extends Home {
+  constructor(dataTrip) {
+    super(dataTrip); 
+    this.dataTrip = {}; 
+
+    for (const key in dataTrip) {
+      if(Object.hasOwnProperty.call(dataTrip, key)) {
+        const value = dataTrip[key]; 
+        const camelCaseKey = key.replace(/\s([a-z])/g, (_, followingLetter) => followingLetter.toUpperCase()); // - Convert key to camelCase and Exp Reg -
+        this.dataTrip[camelCaseKey] = typeof value === "string" ? value.trim() : value; 
+      }
+    }
+  }; 
+
+  getHomeDetails() {
+    const imgSrc = this.dataTrip.images && this.dataTrip.images.image ? this.dataTrip.images.image : ''; 
+  }
+
+}; 

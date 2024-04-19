@@ -1,4 +1,4 @@
-//*? === Algorithms === */
+//*TODO: ===== === Algorithms === ====== */
 
 //** === Alg: BubbleSort === */
 export const bubbleSort = (array, proveFunc) => {
@@ -62,3 +62,55 @@ export function binarySearch(dataSorted, searchKeyword) {
 
   return -1;
 }; 
+
+//** === Alg: MergeSort === */
+export function mergeSort(start, end){
+  if(Math.abs(end -  start) <= 1) return; 
+  
+  let mergeFrom = 0;
+  let mergeTo = -1; // End To Data
+  let width; 
+  let i; 
+
+  for (width = 1; width < end; width *= 2) {
+    merge(mergeFrom, i, Math.min(i + width, end), Math.min(i + 2* width, end), mergeTo); 
+    mergeFrom = (mergeFrom === 0 ? 1 : 0); 
+    mergeTo = 1 - mergeFrom; 
+  }
+
+  if (mergeFrom !== 0) {
+    copy(mergeFrom, mergeTo, start, end); 
+  }
+}; 
+
+
+function merge(mergeFrom, start, middle, end, mergeTo) {
+  let i = start; 
+  let j = middle; 
+  let k; 
+
+  for(k = start; k < end; k++) {
+    if (i < middle && (j >= end || D[mergeFrom][i] <= D[mergeFrom][j])) {
+      D[mergeTo][k] = D[mergeFrom][i]; 
+      i += 1; // List
+    } else {
+      D[mergeTo] = D[mergeFrom[j]]; 
+      j += 1;  // SubList
+    }
+  }
+}; 
+
+
+function copy(mergeFrom, mergeTo, start ,end) {
+  let i; 
+  for (i = start; i < end; i++) {
+    D[mergeTo][i] = D[mergeFrom][i]
+  }
+}; 
+//mergeSort(0, D[o].length); 
+/**
+ * width *= 2: Después de cada iteración, el width se duplica. Esto se hace multiplicando width por 2. Por ejemplo, si comenzamos con un width de 1, en la siguiente iteración será 2, luego 4, luego 8, y así sucesivamente. Esto nos permite dividir eficientemente el arreglo en subarreglos de tamaño potencias de 2 para la fusión.
+ */
+
+
+//** ===  === */
