@@ -168,3 +168,9 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+# Ignore Archive (Configurations)
+.env
+
+# Ignore Carpet Node_modules
+node_modules
