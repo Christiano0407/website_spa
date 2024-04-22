@@ -21,7 +21,7 @@ export const tripDisplay = async () => {
 
         dataSorted.forEach( item => {
           const tripPageData = {
-            destination: item.destination, 
+            Destination: item.Destination, 
             startDate: item["Start date"], 
             endDate: item["end date"],
             accomodationType: item["Accommodation type"], 
@@ -36,7 +36,7 @@ export const tripDisplay = async () => {
           const detailsTrip = `${detailsTripPage}`;  
 
           const tripCardDisplay = document.createElement("div"); 
-          tripCardDisplay.className = "display__tripCards"; 
+          tripCardDisplay.className = "section display__tripCards"; 
           tripCardDisplay.innerHTML = detailsTrip; 
 
           displayMobile.appendChild(tripCardDisplay); 

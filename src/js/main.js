@@ -159,92 +159,58 @@ const tripDestinationAndFlight = async (keywords) => {
 
 
 //*? === Principal HomePage === */
-/* const homePageContent = displayHome(); 
-displayMobile.appendChild(homePageContent);  */
+const homePageContent = displayHome(); 
+displayMobile.appendChild(homePageContent); 
 
-//*? ==== Changes Section & LazyLoading ==== */
-const changesSection = (sectionId) => {
-  main.forEach(page => {
-    page.classList.remove("active"); 
-  })
-  sections.classList.add("active"); 
+//*? ==== Changes Section & LazyLoading (System of Navigation between Sections) ==== */
 
-  lazyLoading(sectionId); 
-}; 
-
-
-const lazyLoading = (idSection) => {
-  try {
-    if(sections.dataset.loaded !== True) {
-       sections.dataset.loaded ="True"; 
-    } else {
-      throw new Error("To load Sections");  
-    }
-  }catch(err) {
-    console.error(`Error to get and Load your Page ${err}`); 
-  }
-  // - Add Display -
-}; 
-
-
-//** === ===== Functions Get Section & Loaded ===== === */
-const sectionsLoaders = {
-  "home": { loader: displayHome, active: true },
-  "trip": { loader: tripDisplay, active: false },
-};
-
-
-//*? ==== Btn Menu Bar && Display Content === (Remember: "escalable y fácil de mantener) ==== */
-document.addEventListener('DOMContentLoaded', () => { 
-  const loading = document.createElement("span"); 
-  loading.className = "loading__text"; 
-  loading.textContent = "loading..."; 
-  let currentPageContent = null; 
-  let currentPrincipalPage = "home"; 
-
-  const sectionPrincipalLoaded = (sectionId) => {
+//** === Functions Get Section & Loaded - (System of Navigation between Sections) - === */
+const executeNavigation = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Limpiar el contenido inicial
     displayMobile.innerHTML = ""; 
-    displayMobile.appendChild(loading); 
-    // Obtener el ID de la sección asociada al botón (navBar)
-    const sectionsDataLoaded = e.target.getAttribute("data-section"); 
-    // Obtener la función de carga de contenido para la sección
-    const sectionLoader = sectionsLoaders[sectionsDataLoaded];  
+    // Mostrar la sección "home" al cargar la página
+    /* const homePageContent = displayHome(); 
+    displayMobile.appendChild(homePageContent); */ 
+    // Asignar eventos de clic a los botones de navegación
+    btnMenu.forEach(navLink => {
+      navLink.addEventListener("click", () => {
+       const sectionDataId = navLink.getAttribute("data-section"); 
+       // Ocultar todas las secciones
+       displayMobile.querySelectorAll(".section"),forEach(section => {
+         section.classList.add("hidden"); 
+         section.classList.remove("active"); 
+       })
+        // Muestra la sección correspondiente (con lazy loading si es necesario)
+        let sectionShow = displayMobile.querySelector(`#${sectionDataId}`); 
+        if(!sectionShow) {
+         sectionShow = document.createElement("div"); 
+         sectionShow.id = sectionDataId; 
+         sectionShow.classList.add("section"); 
+         sectionShow.classList.add("active"); 
+         sectionShow.innerHTML = `Content of the Section ${sectionDataId}`; 
+   
+         if(sectionDataId === "home") {
+           sectionShow.innerHTML = displayHome(); 
+         } else if(sectionDataId === "trip") {
+           sectionShow.innerHTML = tripDisplay(); 
+         }
+   
+         displayMobile.appendChild(sectionShow);
+        } else {
+         sectionShow.classList.remove("hidden"); 
+         sectionShow.classList.add("active");
+        }
+   
+        // Resaltar Botón Active 
+        navLink.forEach(link => {
+          link.classList.remove("active"); 
+        }); 
+        navLink.classList.add("active"); 
+   
+      })
+   }); 
+  }); 
+}; 
 
-    if(sectionLoader) {
-      displayMobile.innerHTML = "";
-      const content = sectionLoader.loader();
-      displayMobile.innerHTML = "";   
-      displayMobile.appendChild(content); 
-      currentPageContent = content; 
-      currentPrincipalPage = sectionId; 
-    }
-    // Remover la clase "active" de todos los botones del menú
-    btnMenu.forEach(item => {
-      item.classList.remove("active"); 
-    }); 
-
-    const activeBtn = document.querySelector(`#menu${sectionId.charAt[0].toUpperCase() + sectionId.slice(1)}`); 
-
-    if(activeBtn) {
-      activeBtn.classList.add("active"); 
-    } else {
-      console.error("section Loaded Error to Update."); 
-    }
-
-  }
-  
-  btnMenu.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault(); 
-      // Obtener el ID de la sección asociada al botón (navBar)
-      const sectionsDataId = e.target.getAttribute("data-section"); 
-      if(sectionsDataId !== currentPrincipalPage) {
-        sectionPrincipalLoaded(sectionsDataId); 
-      } else {
-        console.error("Section Page Error to Loaded.")
-      } 
-     });
-   });
-
-   sectionPrincipalLoaded(currentPrincipalPage); 
-}); 
+executeNavigation(); 

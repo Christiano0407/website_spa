@@ -35,7 +35,7 @@ export const displayHome = () => {
                     const displayCards = document.createElement("div"); 
                     const displayCardsPlus = document.createElement("div"); 
                     
-                    displayCards.className = "home__displayCard"; 
+                    displayCards.className = "section home__displayCard"; 
                     displayCardsPlus.className = "home__displayCardPlus"; 
                     displayCards.innerHTML = detailsHome;
                     displayCardsPlus.innerHTML = detailsHome;
