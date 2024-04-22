@@ -23,13 +23,6 @@ const btnLike = document.querySelector("#menuLike");
 const btnSettings = document.querySelector("#menuSettings"); 
 /* const mainDisplayMobile = document.querySelector("#displayMainMobile"); */
 
-
-//** === ===== Functions Get Section & Loaded ===== === */
-const sectionsLoaders = {
-  "home": displayHome,
-  "trip": tripDisplay, 
-};
-
 //*? === Btn Search Display === */
 document.addEventListener("DOMContentLoaded", () => {
   btnSearch.addEventListener("click", async (e) => {
@@ -165,7 +158,7 @@ const tripDestinationAndFlight = async (keywords) => {
 };
 
 
-//*? === Principal HomePage */
+//*? === Principal HomePage === */
 const homePageContent = displayHome(); 
 displayMobile.appendChild(homePageContent); 
 
@@ -191,30 +184,59 @@ const lazyLoading = (idSection) => {
     console.error(`Error to get and Load your Page ${err}`); 
   }
   // - Add Display -
-};  
+}; 
+
+
+//** === ===== Functions Get Section & Loaded ===== === */
+const sectionsLoaders = {
+  "home": { loader: displayHome, active: true },
+  "trip": { loader: tripDisplay, active: false },
+};
+
+let currentPageContent = null; 
 
 
 //*? ==== Btn Menu Bar && Display Content === (Remember: "escalable y fácil de mantener) ==== */
 document.addEventListener('DOMContentLoaded', () => { 
   displayMobile.innerHTML = "";  
+  
   btnMenu.forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault();
+      e.preventDefault();  
+      // Remover la clase "active" de todos los botones del menú
       btnMenu.forEach(item => {
         item.classList.remove("active"); 
       }); 
       e.target.classList.add("active"); 
-      displayMobile.innerHTML = ""; 
-      // Obtener el ID de la sección asociada al botón
+      // Obtener el ID de la sección asociada al botón (navBar)
       const sectionsId = e.target.getAttribute("data-section"); 
       // Obtener la función de carga de contenido para la sección
       const sectionLoader = sectionsLoaders[sectionsId];  
 
-      if (sectionLoader) { 
+     /*  if (sectionLoader) { 
         const homePageContent = displayHome(); 
         displayMobile.appendChild(homePageContent);
+      } */
+      if(sectionLoader) {
+        displayMobile.innerHTML = "";
+        const content = sectionLoader.loader();  
+        displayMobile.appendChild(content); 
       }
 
+      Object.keys(sectionsLoaders).forEach(sectionBtn => {
+        sectionsLoaders[sectionBtn].active = sectionBtn === sectionsId; 
+      })
      });
    });
+
+  /*  btnTrip.addEventListener("click", () => {
+    console.log("Trip"); 
+    displayMobile.innerHTML = ""; 
+    const tripPages = tripDisplay(); 
+    displayMobile.appendChild(tripPages);
+
+    btnTrip.classList.add("active"); 
+    btnHome.classList.remove("active");
+    currentPageContent = tripPages;  
+   });  */
 }); 

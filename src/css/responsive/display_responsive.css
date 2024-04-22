@@ -267,6 +267,13 @@
    }
    .menu__list--nav {
     font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    }
    .menu__list--nav:active {
     color: var(--clr-principal);

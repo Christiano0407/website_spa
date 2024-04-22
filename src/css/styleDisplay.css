@@ -254,6 +254,12 @@ button:active, wrapper__btn:active {
   justify-content: center;
   align-items: center;
 }
+
+/* === Buttons navBar === */
+.menu__list--nav {
+  border-radius: 50%;
+}
+
 /* ==== Transitions & LazyLoading ==== */
 .sections__display {
  opacity: 0;
