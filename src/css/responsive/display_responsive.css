@@ -635,6 +635,7 @@
   }
   .header__desktop {
     padding: 1rem;
+    height: 10vh;
   }
   .display__scroll {
     width: 1500vw;
@@ -643,6 +644,24 @@
    .home__card {
      display: flex;
      flex-direction: column;
+   }
+   .header__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+   }
+   .header__navBar {
+    width: 75%;
+   }
+   .list__item::after {
+    height: 2.5rem;
+   }
+   .list__item a {
+    font-weight: 900;
+     font-size: 1.8rem;
+   }
+   .list__item--travel a {
+    font-weight: 500;
+    font-size: 1.5rem;
    }
 }
 @media (min-width: 768px) and (max-width: 1024px) {}

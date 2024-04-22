@@ -533,6 +533,75 @@ button:active, wrapper__btn:active {
 .header__desktop {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
+  background: var(--clr-principal);
+  color: var(--clr-white-one);
+}
+.header__logo {
+  margin: 0 2rem;
+}
+.list__item {
+  position: relative;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list__item::after {
+  content: url('/src/icons/right-long-solid.svg');
+  opacity: .6;
+}
+.list__item :hover ul {
+  display: block;
+}
+.list__item a {
+  color: #f2f2f2; 
+}
+.list__item a:hover {
+  color: #E8E8E8;
+}
+.list__item ul {
+  position: absolute;
+  top: 100%;
+  left: -2rem;
+  background-color: #212224;
+  border-radius: .5rem;
+  padding: .5rem;
+  display: none;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
+.list__item--travel a{
+ color: #f2f2f2f2;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem;
+ min-width: 15rem;
+ border-radius: .5rem;
+}
+.list__item--travel a::after {
+  content: url('/src/icons/right-long-solid.svg');
+  height: 17px;
+  opacity: 0;
+}
+.list__item--travel a:hover {
+  background-color: #2C2D2F;
+  padding: 1rem 1.5rem;
+}
+.list__item ul a:hover::after {
+  opacity: 1;
+}
+
+.list__item:hover::after {
+  opacity: 1;
+}
+
+.list__item:hover > a {
+  color: #E8E8E8;
+}
+
+ /* Air === Navigation Transitions === */
