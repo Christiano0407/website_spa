@@ -529,3 +529,10 @@ button:active, wrapper__btn:active {
  }
 
 /* ===== css Styles Trip ===== */
+/* ===== === css Styles Desktop === ===== */
+.header__desktop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

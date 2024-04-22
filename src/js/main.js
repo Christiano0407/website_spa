@@ -213,4 +213,25 @@ const executeNavigation = () => {
   }); 
 }; 
 
-executeNavigation(); 
+//executeNavigation(); 
+/* const executeDisplayHome = () => {
+  hideAllSections(); 
+  displayMobile.querySelector("#menuHome").classList.remove("hidden"); 
+}; 
+
+
+const executeDisplayTrip = () => {
+  hideAllSections(); 
+  displayMobile.querySelector("#menuTrip").classList.remove("hidden"); 
+}; 
+
+
+const hideAllSections = () => {
+  const sections = displayMobile.querySelectorAll(".section"); 
+  sections.forEach(section => {
+    section.classList.add("hidden"); 
+  })
+}; 
+
+btnHome.addEventListener("click", executeDisplayHome); 
+btnTrip.addEventListener("click", executeDisplayTrip);  */

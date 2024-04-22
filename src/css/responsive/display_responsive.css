@@ -3,6 +3,9 @@
 /*  .travel__display {
   display: none;
  }  */
+ .header__desktop {
+  display: none;
+ }
  .home__icons {
   display: flex;
   justify-content: space-between;
@@ -210,6 +213,9 @@
   /* .travel__display {
     display: none;
   } */
+  .header__desktop {
+    display: none;
+  }
   .home__icons {
     display: flex;
     justify-content: space-between;
@@ -415,10 +421,197 @@
   /* .travel__display {
     display: none;
   } */
+  .header__desktop {
+    display: none;
+  }
+  .home__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   }
+   .home__icons--time, .mobile__icons {
+    font-size: 1rem;
+    font-weight: 700;
+   }
+   .home__icons--mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .navBar__logo--figure {
+    width: 3rem;
+    height: 3rem;
+   }
+   .navBar__brand {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+   }
+   .navBar__brand--icon {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    color: var(--clr-principal);
+   }
+   .navBar__brand--name {
+    font-size: 1.6rem;
+    font-weight: 700;
+   }
+   .navBar__bell--icon {
+    font-size: 1.6rem;
+   }
+   .navBar__bell--icon:active {
+    color: var(--clr-principal);
+   }
+
+   /* === Menu Navigation Fixed === */
+   .nav__bar {
+    height: 8rem;
+    bottom: 0;
+   }
+   .menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   }
+   .menu__list--nav {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .menu__list--nav:active {
+    color: var(--clr-principal);
+   }
+   .hero__icon {
+    font-size: 1.4rem;
+   }
+   .hero__btn {
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+   }
+   .hero__btn--text {
+    font-size: 1.4rem;
+    font-weight: 600;
+   }
+   .hero__formulary {
+    width: 80%;
+   }
+   /* === Display Page Changes === */
+ .btn__display--back {
+  z-index: 1;
+  top: 50px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .btn__display--back i {
+  font-size: 2rem;
+ }
+ .travel__wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: 30rem 1fr;
+  box-shadow: 2px 2px 15px #333;  
+  gap: 1rem;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)), url('../img/mobile/travel_12.jpg') center/cover no-repeat;
+  object-fit: contain;
+  background-position: top center; 
+  background-repeat: var(--no-repeat);
+  background-size: contain;
+ }
+ .display__data {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+ .destination__data, .travel__destiny, .travel__transport {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+ }
+ .destination__data p, .travel__destiny p, .travel__transport  p {
+  margin-bottom: 0.5rem;
+ }
+ .destination__data--title, .travel__destiny--destiny, .travel__transport--destiny {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #111;
+ }
+ .destination__data--traveler {
+  font-size: 1.6rem;
+  color: #333;
+ }
+ .btn__pay {
+  width: 92.5%;
+  height: 30px;
+  bottom: 50px;
+  left: 1rem;
+  right: 1rem;
+  padding: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+ }
+
+ /* ===== Scrolling ===== */
+ .homeMain__display {
+  margin: 1rem auto;
+ }
+  .home_-card--text {
+    height: 10rem;
+    padding: 0.5rem;
+  }
+  .title__destiny {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+  }
+  .title__transport {
+    margin: 0.5rem auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .trip__pay {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  .tripBtn__pay {
+    padding: 1rem 3rem;
+    margin: 0.5rem 0;
+  }
+  .homeDisplay__recommendation {
+    padding: 1rem;
+  }
+  .recommendation__text {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .recommendation__all {
+    font-size: 1.4rem;
+    font-weight: 500;
+    filter: brightness(0.5);
+  }
   /* ===== Scrolling ===== */
  .display__scroll {
-  width: 1500vw;
-  width: 350vw;
+  width: 1800vw;
+  height: 37.5rem;
  }
  .home__card {
    display: flex;
@@ -439,6 +632,9 @@
   } */
   .home__header {
     display: none;
+  }
+  .header__desktop {
+    padding: 1rem;
   }
   .display__scroll {
     width: 1500vw;
