@@ -159,8 +159,8 @@ const tripDestinationAndFlight = async (keywords) => {
 
 
 //*? === Principal HomePage === */
-const homePageContent = displayHome(); 
-displayMobile.appendChild(homePageContent); 
+/* const homePageContent = displayHome(); 
+displayMobile.appendChild(homePageContent);  */
 
 //*? ==== Changes Section & LazyLoading ==== */
 const changesSection = (sectionId) => {
@@ -193,50 +193,58 @@ const sectionsLoaders = {
   "trip": { loader: tripDisplay, active: false },
 };
 
-let currentPageContent = null; 
-
 
 //*? ==== Btn Menu Bar && Display Content === (Remember: "escalable y fácil de mantener) ==== */
 document.addEventListener('DOMContentLoaded', () => { 
-  displayMobile.innerHTML = "";  
+  const loading = document.createElement("span"); 
+  loading.className = "loading__text"; 
+  loading.textContent = "loading..."; 
+  let currentPageContent = null; 
+  let currentPrincipalPage = "home"; 
+
+  const sectionPrincipalLoaded = (sectionId) => {
+    displayMobile.innerHTML = ""; 
+    displayMobile.appendChild(loading); 
+    // Obtener el ID de la sección asociada al botón (navBar)
+    const sectionsDataLoaded = e.target.getAttribute("data-section"); 
+    // Obtener la función de carga de contenido para la sección
+    const sectionLoader = sectionsLoaders[sectionsDataLoaded];  
+
+    if(sectionLoader) {
+      displayMobile.innerHTML = "";
+      const content = sectionLoader.loader();
+      displayMobile.innerHTML = "";   
+      displayMobile.appendChild(content); 
+      currentPageContent = content; 
+      currentPrincipalPage = sectionId; 
+    }
+    // Remover la clase "active" de todos los botones del menú
+    btnMenu.forEach(item => {
+      item.classList.remove("active"); 
+    }); 
+
+    const activeBtn = document.querySelector(`#menu${sectionId.charAt[0].toUpperCase() + sectionId.slice(1)}`); 
+
+    if(activeBtn) {
+      activeBtn.classList.add("active"); 
+    } else {
+      console.error("section Loaded Error to Update."); 
+    }
+
+  }
   
   btnMenu.forEach(btn => {
     btn.addEventListener("click", (e) => {
-      e.preventDefault();  
-      // Remover la clase "active" de todos los botones del menú
-      btnMenu.forEach(item => {
-        item.classList.remove("active"); 
-      }); 
-      e.target.classList.add("active"); 
+      e.preventDefault(); 
       // Obtener el ID de la sección asociada al botón (navBar)
-      const sectionsId = e.target.getAttribute("data-section"); 
-      // Obtener la función de carga de contenido para la sección
-      const sectionLoader = sectionsLoaders[sectionsId];  
-
-     /*  if (sectionLoader) { 
-        const homePageContent = displayHome(); 
-        displayMobile.appendChild(homePageContent);
-      } */
-      if(sectionLoader) {
-        displayMobile.innerHTML = "";
-        const content = sectionLoader.loader();  
-        displayMobile.appendChild(content); 
-      }
-
-      Object.keys(sectionsLoaders).forEach(sectionBtn => {
-        sectionsLoaders[sectionBtn].active = sectionBtn === sectionsId; 
-      })
+      const sectionsDataId = e.target.getAttribute("data-section"); 
+      if(sectionsDataId !== currentPrincipalPage) {
+        sectionPrincipalLoaded(sectionsDataId); 
+      } else {
+        console.error("Section Page Error to Loaded.")
+      } 
      });
    });
 
-  /*  btnTrip.addEventListener("click", () => {
-    console.log("Trip"); 
-    displayMobile.innerHTML = ""; 
-    const tripPages = tripDisplay(); 
-    displayMobile.appendChild(tripPages);
-
-    btnTrip.classList.add("active"); 
-    btnHome.classList.remove("active");
-    currentPageContent = tripPages;  
-   });  */
+   sectionPrincipalLoaded(currentPrincipalPage); 
 }); 
