@@ -38,6 +38,10 @@ Creating a Single Page Application Website with Javascript Vanilla, ViteJs, Expr
 
 ### Project Code Travel Single Web Application
 
+> Create Logo and Name to this Project With IA
+
+![logo_ia](./src/icons/Dream%20Trip.png)
+
 ### Creating a Single Web Application Travel. For this Project used Algorithms, Pattern Designs, Structure of Dates, Data Base
 
 > Use a Patterns Design ( Factory Pattern )
