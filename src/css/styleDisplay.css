@@ -650,3 +650,13 @@ nav ul a,
 .main__heroSection {
   margin-bottom: 2rem;
 }
+.heroSection__figure {
+ position: absolute;
+}
+.heroSection__img {
+  filter: brightness(0.5);
+}
+.heroSection__text {
+ position: relative;
+ color: #f2f2f2;
+}

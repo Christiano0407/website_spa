@@ -642,7 +642,7 @@
   }
   .heroSection__display {
     width: 100%;
-    height: 35rem;
+    height: 40rem;
   }
   .heroSection__figure {
     width: 100%;
@@ -650,7 +650,7 @@
   }
   .display__scroll {
     width: 1000vw;
-    height: 35vw;
+    height: 50vw;
    }
    .home__card {
      display: flex;
@@ -680,6 +680,51 @@
    }
    .list__item:hover ul {
     transform: translateX(0);
+   }
+   .heroSection__text {
+    top: 175px;
+    left: 50px;
+    font-size: 4rem;
+    font-weight: 700;
+   }
+   /* = Cards = */
+   .homeDisplay__recommendation {
+     padding: 1rem;
+   }
+   .recommendation__text {
+     font-weight: 900;
+     font-size: 1.8rem;
+   }
+   .recommendation__all {
+    font-weight: 500;
+    font-size: 1.4rem;
+   }
+   .home__card {
+    border-radius: 1rem;
+   }
+   .home__card--figure {
+    width: 100%;
+    height: 60%;
+   }
+   .title__destiny {
+    font-size: 2rem;
+   }
+   .home__card--pay {
+    padding: 1rem;
+   }
+   .title__transport {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+   }
+   .trip__pay {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+   }
+   .tripBtn__pay {
+    width: 8rem;
+    height: 3rem;
    }
 }
 @media (min-width: 768px) and (max-width: 1024px) {}
