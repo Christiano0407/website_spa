@@ -660,3 +660,7 @@ nav ul a,
  position: relative;
  color: #f2f2f2;
 }
+.recommendation__all, .recommendation-icon {
+  display: flex;
+  align-items: center;
+}

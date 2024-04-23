@@ -692,7 +692,7 @@
      padding: 1rem;
    }
    .recommendation__text {
-     font-weight: 900;
+     font-weight: 700;
      font-size: 1.8rem;
    }
    .recommendation__all {
@@ -725,6 +725,12 @@
    .tripBtn__pay {
     width: 8rem;
     height: 3rem;
+   }
+   .recommendation-icon {
+    margin-left: 1rem;
+   }
+   .recommendation-icon img {
+    width: 2rem;
    }
 }
 @media (min-width: 768px) and (max-width: 1024px) {}
