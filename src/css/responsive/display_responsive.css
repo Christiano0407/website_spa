@@ -732,13 +732,35 @@
    .recommendation-icon img {
     width: 2rem;
    }
+   .home__displayPlus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: 2rem;
+   }
+   .home__displayCardPlus {
+    padding: 1rem;
+   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home__displayPlus {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  }
+}
 @media (min-width: 1024px) {}
 
 /** ====== === Screen Responsive === ====== */
-@media (min-width: 1025px) and (max-width: 1280px) {}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .homeMain__displayPlus {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
+}
 @media (min-width: 1280px) {}
 @media (min-width: 1281px) and (max-width: 1920px) {}
 @media (min-width: 1536px) {}
-@media (min-width: 1920px) {}
+@media (min-width: 1920px) {
+  .homeMain__displayPlus {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); 
+  }
+}
