@@ -3,7 +3,17 @@
 /*  .travel__display {
   display: none;
  }  */
- .header__desktop, .main__heroSection {
+ .recommendation-icon img {
+  width: 1rem;
+ }
+  .recommendation-icon {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+ .header__desktop{
+  display: none;
+ }
+ .main__heroSection  {
   display: none;
  }
  .home__icons {
@@ -213,6 +223,13 @@
   /* .travel__display {
     display: none;
   } */
+  .recommendation-icon img {
+    width: 1rem;
+  }
+  .recommendation-icon {
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
   .header__desktop, .main__heroSection {
     display: none;
   }
@@ -421,8 +438,15 @@
   /* .travel__display {
     display: none;
   } */
-  .header__desktop, .main__heroSection {
+  .header__desktop {
     display: none;
+  }
+  .main__heroSection {
+    display: none;
+  }
+  .recommendation-icon {
+    margin-right: 2rem;
+    margin-left: 1rem;
   }
   .home__icons {
     display: flex;
@@ -623,6 +647,9 @@
   grid-auto-flow: row;
   gap: 1rem;
 }
+.recommendation-icon img {
+  width: 1rem;
+}
 }
 
 /** ==== === Tablet Responsive === ==== */
@@ -636,6 +663,7 @@
   .header__desktop {
     padding: 1rem;
     height: 10vh;
+    display: flex;
   }
   .main__heroSection {
     width: 100%;
