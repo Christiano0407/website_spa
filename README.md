@@ -86,3 +86,13 @@ import { tripDisplay } from "./pages/trip.js";
 > Data Base (First Data)
 
 ![alt text](./src/img/imgReadme/image-11.png)
+
+> Project Images (Responsive Design: Mobile and Desktop)
+
+![travel_mob](./src/img/screenImg/mobile_1.png)
+
+![travel_mob](./src/img/screenImg/mobile_2.png)
+
+![travel_mob](./src//img/screenImg/mobile_3.png)
+
+![landing_travel](./src/img/screenImg/landing_1.png)
