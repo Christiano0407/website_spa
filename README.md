@@ -93,6 +93,6 @@ import { tripDisplay } from "./pages/trip.js";
 
 ![travel_mob](./src/img/screenImg/mobile_2.png)
 
-![travel_mob](./src//img/screenImg/mobile_3.png)
-
 ![landing_travel](./src/img/screenImg/landing_1.png)
+
+![travel_mob](./src//img/screenImg/mobile_3.png)
