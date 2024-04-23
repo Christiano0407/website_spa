@@ -42,30 +42,47 @@ Creating a Single Page Application Website with Javascript Vanilla, ViteJs, Expr
 
 > Use a Patterns Design ( Factory Pattern )
 
-```javascript
-/** 
- * To this project I add a pattern design for call and create  new instances of code (DOM) that call at my Data Base (JSON). All these process used only with one Design Pattern (Factory Pattern)
-*/
-```
+> To this project I add a pattern design for call and create  new instances of code (DOM) that call at my Data Base (JSON). All these process used only with one Design Pattern (Factory Pattern)
 
-![alt text](image.png)
+![alt text](./src/img/imgReadme/image.png)
 
-![alt text](image-1.png)
+![alt text](./src/img/imgReadme/image-1.png)
 
 > Used Algorithms for this project: Bubble Sort, BinarySearch and MergeSort
 
+> To this Project I used BubbleSort to order my structure data Travel and used MergeSort to better to the expereince of user (Big O notation). Besides, I use BinarySearch for search in my Data Base
+
+![alt text](./src/img/imgReadme/image-2.png)
+
+![alt text](./src/img/imgReadme/image-3.png)
+
+![alt text](./src/img/imgReadme/image-4.png)
+
+![alt text](./src/img/imgReadme/image-5.png)
+
+![alt text](./src/img/imgReadme/image-6.png)
+
+> Use Modules Imports (Node Modules)
+
 ```javascript
-/**
- * To this Project I used BubbleSort to order my structure data Travel and used MergeSort to better to the expereince of user (Big O notation). Besides, I use BinarySearch for search in my Data Base. 
-*/
+import { bubbleSort } from "../algorithm/algorithms.js";
+import { CityDestination, TravelLodging, TravelTransport } from "../poo/patternsDesign.js";
+import { displayHome } from "./pages/home.js";
+import { tripDisplay } from "./pages/trip.js";
 ```
 
-![alt text](image-2.png)
+> Use Display in my Events for my project (System of Navigation between Sections)
 
-![alt text](image-3.png)
+![alt text](./src/img/imgReadme/image-7.png)
 
-![alt text](image-4.png)
+> Use Function to call and Search in my Data Travel. Call my Data and my Pattern Design and ALgorithms for create my Object and used in my Project
 
-![alt text](image-5.png)
+![alt text](./src/img/imgReadme/image-8.png)
 
-![alt text](image-6.png)
+![alt text](./src/img/imgReadme/image-9.png)
+
+![alt text](./src/img/imgReadme/image-10.png)
+
+> Data Base (First Data)
+
+![alt text](./src/img/imgReadme/image-11.png)
