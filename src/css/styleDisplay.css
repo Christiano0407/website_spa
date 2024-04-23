@@ -533,13 +533,19 @@ button:active, wrapper__btn:active {
 .header__desktop {
   width: 100%;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   background: var(--clr-principal);
   color: var(--clr-white-one);
+  box-shadow: 1px 1px 15px #111;
+  position: fixed;
+  z-index: 1;
 }
 .header__logo {
   margin: 0 2rem;
+}
+.header__logo img {
+  border-radius: 5rem;
 }
 .list__item {
   position: relative;
@@ -563,18 +569,15 @@ button:active, wrapper__btn:active {
 }
 .list__item ul {
   position: absolute;
+  z-index: 1;
   top: 100%;
   left: -2rem;
   background-color: #212224;
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 1rem;
+  padding: 1rem;
   display: none;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-.list__item--travel a{
+.list__item--travel a, .list__item--lodging a, .list__item--transport  a{
  color: #f2f2f2f2;
  display: flex;
  justify-content: space-between;
@@ -583,12 +586,12 @@ button:active, wrapper__btn:active {
  min-width: 15rem;
  border-radius: .5rem;
 }
-.list__item--travel a::after {
+.list__item--travel a::after, .list__item--lodging a::after,.list__item--transport a::after {
   content: url('/src/icons/right-long-solid.svg');
-  height: 17px;
+  height: 1rem;
   opacity: 0;
 }
-.list__item--travel a:hover {
+.list__item--travel a:hover, .list__item--lodging a:hover, .list__item--transport a:hover {
   background-color: #2C2D2F;
   padding: 1rem 1.5rem;
 }
@@ -604,4 +607,46 @@ button:active, wrapper__btn:active {
   color: #E8E8E8;
 }
 
+.header__navBar--list {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
  /* Air === Navigation Transitions === */
+ nav ul a {
+  transition-property: color;
+ }
+ .list__item::after {
+  transition-property: opacity;
+ }
+ .list__item ul {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility, transform;
+}
+.list__item:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+.list__item ul a {
+  transition-property: background-color, padding;
+}
+.list__item ul a::after {
+  transition-property: opacity;
+}
+
+nav ul a,
+.list__item:hover::after,
+.list__item ul,
+.list__item ul a,
+.list__item ul a::after {
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
+}
+
+/* === Hero Section === */
+.main__heroSection {
+  margin-bottom: 2rem;
+}
