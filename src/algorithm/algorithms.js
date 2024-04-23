@@ -23,7 +23,7 @@ export const bubbleSort = (array, proveFunc) => {
 };
 
 //** === Alg: BinarySearch === */
-/* export const binarySearch = (array, keyword) => {
+const binarySearch = (array, keyword) => {
   let minIndex = 0; 
   let maxIndex = array.length - 1; 
   let middleElement, middleValue; 
@@ -41,7 +41,9 @@ export const bubbleSort = (array, proveFunc) => {
     }
   }
   return -1;
-};  */
+}; 
+
+
 export function binarySearch(dataSorted, searchKeyword) {
   let startIndex = 0;
   let endIndex = dataSorted.length - 1;
